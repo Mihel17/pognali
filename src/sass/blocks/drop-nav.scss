@@ -1,0 +1,16 @@
+.drop-nav {
+  @media (max-width: $desktop) {
+    display: none;
+    grid-template-rows: 1fr max-content;
+    position: relative;
+  }
+
+  @media (min-width: $desktop) {
+    order: 2;
+
+    .contacts,
+    .social-list {
+      display: none;
+    }
+  }
+}

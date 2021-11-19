@@ -1,0 +1,39 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social__item {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+.social__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    fill: $dark-blue;
+  }
+}
+
+.social__img {
+  @media (min-width: $tablet) {
+    transform: scale(1.3);
+  }
+}
+
+.social__item--bg {
+  background-color: $yellow;
+}

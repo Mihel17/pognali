@@ -1,0 +1,31 @@
+.steps {
+  background-image: linear-gradient(
+    to bottom,
+    $dark-blue,
+    $dark-blue 25%,
+    $main-blue 25%,
+    $main-blue
+  );
+
+  @media (max-width: $tablet) {
+    padding: 14px 0 39px;
+  }
+
+  @media (min-width: $tablet) {
+    background-image: none;
+  }
+}
+
+.steps__list {
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    z-index: 1;
+    margin-top: -140px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: -375px;
+  }
+}

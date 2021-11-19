@@ -1,0 +1,51 @@
+.user-counter {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 5px;
+  margin: 0;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr max-content;
+    justify-items: end;
+  }
+
+  @media (min-width: $tablet) {
+    gap: 15px;
+  }
+}
+
+.user-counter__icon {
+  display: grid;
+  align-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.user-counter__amount {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  display: grid;
+  align-content: center;
+  margin: 0;
+  color: $main-blue;
+  opacity: 0.3;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

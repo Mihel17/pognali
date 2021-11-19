@@ -1,0 +1,80 @@
+.contact-bar {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.contact-bar__buttons {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.contact-bar__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  @media (min-width: $desktop) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.contact-bar__button--tel {
+  background-color: $dark-orange;
+}
+
+.contact-bar__button--email {
+  background-color: $dark-yellow;
+}
+
+.contact-bar__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-bar__login-btn {
+  min-height: 40px;
+  font-family: $font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 8px 39px 8px 39px;
+  background-color: $yellow;
+  color: $dark-blue;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    min-height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 8px 10px;
+  }
+}
+
+.contact-bar--40 {
+  .contact-bar__button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-bar__login-btn {
+    min-height: 40px;
+  }
+}

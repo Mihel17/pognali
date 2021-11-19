@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+@@include('layout/head.html')
+
+<body class="inner-page">
+
+  @@include('layout/header.html')
+
+  <main class="main-content  main-content--form">
+
+    <section class="profile-info">
+
+      <h1 class="profile-info__title  main-title">Направления</h1>
+      <h2 class="visually-hidden">Профиль путешественника</h2>
+
+      <div class="profile-info__level  user-level  user-level--thin">
+        <dl class="user-level__list">
+          <dt class="user-level__label">level</dt>
+          <dd class="user-level__number">80</dd>
+        </dl>
+      </div>
+      <!-- companion-card__level  user-level -->
+
+      <img class="profile-info__avatar avatar avatar--100" src="img/human-2.webp" alt="" width="100" height="100">
+
+      <button class="profile-info__button">
+        <span>
+          <span class="profile-info__btn-hide">сменить</span>
+          фото
+        </span>
+      </button>
+
+      <dl class="profile-info__tags  profile-info__fieldset">
+        <dt class="profile-info__legend  profile-info__legend-tags">ТЭГИ</dt>
+        <dd class="profile-info__fieldset-content  profile-info__tags-content">
+          <form class="profile-info__tags-form" action="">
+            <textarea class="profile-info__tags-textarea" name="" id=""
+              rows="1">#бургер #бар #футбол #концерт #крафт</textarea>
+          </form>
+        </dd>
+      </dl>
+      <!-- profile-info__tags -->
+
+      <dl class="profile-info__transport  profile-info__fieldset">
+        <dt class="profile-info__legend  profile-info__legend-transport">транспорт</dt>
+        <dd class="profile-info__fieldset-content">
+
+          <form class="transport">
+            @@include('layout/blocks/transport-list.html')
+          </form>
+          <!-- transport -->
+
+        </dd>
+      </dl>
+      <!-- profile-info__transport -->
+
+    </section>
+    <!-- profile-info -->
+
+    <section class="personal-plan">
+      <div class="container-form">
+
+        <h2 class="personal-plan__title">Мои планы:</h2>
+
+        <ol class="personal-plan__list">
+
+          <li class="personal-plan__item">
+            <dl class="personal-plan__content">
+              <dt class="personal-plan__content-title">Франция, Италия</dt>
+              <dd class="personal-plan__info">
+                <p>3 попутчика</p>
+                <p>26 мар — 29 мар</p>
+              </dd>
+            </dl>
+            <button class="personal-plan__btn" type="button">изменить</button>
+          </li>
+
+          <li class="personal-plan__item">
+            <dl class="personal-plan__content">
+              <dt class="personal-plan__content-title">Таиланд, Индонезия</dt>
+              <dd class="personal-plan__info">
+                <p>1 попутчик</p>
+                <p>1 июл — 15 июл</p>
+              </dd>
+            </dl>
+            <button class="personal-plan__btn" type="button">изменить</button>
+          </li>
+
+        </ol>
+        <!-- personal-plan__list -->
+
+      </div>
+      <!-- container-form -->
+
+    </section>
+    <!-- personal-plan -->
+
+    <section class="add-plan">
+      <div class="container-form">
+
+        <div class="add-plan__header">
+          <h2 class="add-plan__title">Добавить план:</h2>
+          <ul class="add-plan__controlers">
+            <li class="add-plan__controler  add-plan__controler--active"></li>
+            <li class="add-plan__controler"></li>
+            <li class="add-plan__controler"></li>
+          </ul>
+        </div>
+        <!-- add-plan__header -->
+
+        <ol class="add-plan__list">
+
+          <li class="add-plan__item  form-date" id="form-date">
+
+            <div class="form-date__header  plan-header">
+              <h3 class="plan-header__title">Шаг 1. &nbsp; <br class="mobile-break"><br class="tablet-break"><span
+                  class="form-date__header-title">Даты пребывания</span>
+              </h3>
+              <p class="plan-header__text">Укажите предпочтительное количество попутчиков, которых&nbsp; <br
+                  class="mobile-break"><br class="tablet-break"><br class="desktop-break"> вы
+                хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <ul class="plan-header__nav">
+                <li class="plan-header__item  plan-header__item--active">
+                  <a class="no-style  plan-header__nav-link" href="#form-date">Даты</a>
+                </li>
+                <li class="plan-header__item">
+                  <a class="no-style  plan-header__nav-link" href="#form-direction">маршрут</a>
+                </li>
+                <li class="plan-header__item">
+                  <a class="no-style  plan-header__nav-link" href="#trip-comment">развлечения</a>
+                </li>
+              </ul>
+            </div>
+            <!-- form-date__header  plan-header -->
+
+            <ul class="form-date__blocks">
+
+              <li class="input-block">
+                <h4 class="input-block__title">ищу попутчиков:</h4>
+                <p class="input-block__label">чел.</p>
+
+                <form class="input-block__form" action="https://echo.htmlacademy.ru" method="get">
+                  <input class="input-block__numbers" type="number" min="1" step="1" value="2">
+                  <button class="input-block__less" type="button"></button>
+                  <button class="input-block__more" type="button"></button>
+                </form>
+                <!-- input-block__form -->
+
+                <div class="input-block__childs  checkbox">
+                  <input class="checkbox__input visually-hidden" id="with-childs" name="with-childs" type="checkbox"
+                    checked>
+                  <label class="checkbox__label" for="with-childs">Можно с детьми</label>
+                </div>
+                <!-- input-block__childs  checkbox-->
+
+              </li>
+              <!-- input-block -->
+
+              <li class="add-plan__input-block input-block">
+                <h4 class="input-block__title">длительность:</h4>
+                <p class="input-block__label">дн.</p>
+
+                <form class="input-block__form" action="https://echo.htmlacademy.ru" method="get">
+                  <input class="input-block__numbers" type="number" min="1" step="1" value="2">
+                  <button class="input-block__less" type="button"></button>
+                  <button class="input-block__more" type="button"></button>
+                </form>
+                <!-- input-block__form -->
+
+                <div class="input-block__childs  checkbox">
+                  <input class="checkbox__input visually-hidden" id="childs" name="childs" type="checkbox" checked>
+                  <label class="checkbox__label" for="childs">Можно с детьми</label>
+                </div>
+                <!-- input-block__childs  checkbox-->
+
+              </li>
+              <!-- input-block -->
+
+            </ul>
+            <!-- form-date__blocks -->
+
+            <div class="add-plan__calendar calendar">
+
+              <div class="calendar__nav">
+                <button class="calendar__nav-btn calendar__nav-btn--back"></button>
+                <p class="calendar__nav-date">Март 2019</p>
+                <button class="calendar__nav-btn calendar__nav-btn--next"></button>
+              </div>
+              <!-- calendar__nav -->
+
+              <div class="calendar__days">
+                <span class="calendar__day">П<span class="calendar__day--full">н</span>
+                </span>
+                <span class="calendar__day">В
+                  <span class="calendar__day--full">т</span>
+                </span>
+                <span class="calendar__day">С
+                  <span class="calendar__day--full">р</span>
+                </span>
+                <span class="calendar__day">Ч
+                  <span class="calendar__day--full">т</span>
+                </span>
+                <span class="calendar__day">П
+                  <span class="calendar__day--full">т</span>
+                </span>
+                <span class="calendar__day calendar__day--weekend">С
+                  <span class="calendar__day--full">б</span>
+                </span>
+                <span class="calendar__day calendar__day--weekend">В
+                  <span class="calendar__day--full">с</span>
+                </span>
+              </div>
+              <!-- calendar__days -->
+
+              <form class="calendar__date-content" action="https://echo.htmlacademy.ru" method="get">
+                <ul class="calendar__date-list">
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="23.02" id="23.02" disabled>
+                    <label class="calendar__date-label" for="23.02">23</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="24.02" id="24.02" disabled>
+                    <label class="calendar__date-label" for="24.02">24</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="25.02" id="25.02" disabled>
+                    <label class="calendar__date-label" for="25.02">25</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="26.02" id="26.02" disabled>
+                    <label class="calendar__date-label" for="26.02">26</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="27.02" id="27.02" disabled>
+                    <label class="calendar__date-label" for="27.02">27</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="28.02" id="28.02" disabled>
+                    <label class="calendar__date-label" for="28.02">28</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      id="01.03" value="01.03" disabled>
+                    <label class="calendar__date-label" for="01.03">1</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="02.03" id="02.03" disabled>
+                    <label class="calendar__date-label" for="02.03">2</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="03.03" id="03.03" disabled>
+                    <label class="calendar__date-label" for="03.03">3</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="04.03" id="04.03" disabled>
+                    <label class="calendar__date-label" for="04.03">4</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="05.03" id="05.03" disabled>
+                    <label class="calendar__date-label" for="05.03">5</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="06.03" id="06.03" disabled>
+                    <label class="calendar__date-label" for="06.03">6</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="07.03" id="07.03" disabled>
+                    <label class="calendar__date-label" for="07.03">7</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="08.03" id="08.03" disabled>
+                    <label class="calendar__date-label" for="08.03">8</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="09.03" id="09.03" disabled>
+                    <label class="calendar__date-label" for="09.03">9</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="10.03" id="10.03" disabled>
+                    <label class="calendar__date-label" for="10.03">10</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="11.03" id="11.03" disabled>
+                    <label class="calendar__date-label" for="11.03">11</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="12.03" id="12.03" disabled>
+                    <label class="calendar__date-label" for="12.03">12</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="13.03" id="13.03" disabled>
+                    <label class="calendar__date-label" for="13.03">13</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="14.03" id="14.03" disabled>
+                    <label class="calendar__date-label" for="14.03">14</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="15.03" id="15.03" disabled>
+                    <label class="calendar__date-label" for="15.03">15</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="16.03" id="16.03" disabled>
+                    <label class="calendar__date-label" for="16.03">16</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="17.03" id="17.03" disabled>
+                    <label class="calendar__date-label" for="17.03">17</label>
+                  </li>
+                  <li class="calendar__date" disabled>
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="18.03" id="18.03" disabled>
+                    <label class="calendar__date-label" for="18.03">18</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="19.03" id="19.03" disabled>
+                    <label class="calendar__date-label" for="19.03">19</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="20.03" id="20.03" disabled>
+                    <label class="calendar__date-label" for="20.03">20</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="21.03" id="21.03" disabled>
+                    <label class="calendar__date-label" for="21.03">21</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="22.03" id="22.03" disabled>
+                    <label class="calendar__date-label" for="22.03">22</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="23.03" id="23.03" disabled>
+                    <label class="calendar__date-label" for="23.03">23</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="24.03" id="24.03" disabled>
+                    <label class="calendar__date-label" for="24.03">24</label>
+                  </li>
+                  <li class="calendar__date  calendar__date--from">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="25.03" id="25.03" checked>
+                    <label class="calendar__date-label" for="25.03">25</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="26.03" id="26.03" checked>
+                    <label class="calendar__date-label" for="26.03">26</label>
+                  </li>
+                  <li class="calendar__date  calendar__date--to">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="27.03" id="27.03" checked>
+                    <label class="calendar__date-label" for="27.03">27</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="28.03" id="28.03">
+                    <label class="calendar__date-label" for="28.03">28</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="29.03" id="29.03">
+                    <label class="calendar__date-label" for="29.03">29</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="30.03" id="30.03">
+                    <label class="calendar__date-label" for="30.03">30</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="31.03" id="31.03">
+                    <label class="calendar__date-label" for="31.03">31</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="01.04" id="01.04">
+                    <label class="calendar__date-label" for="01.04">1</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="02.04" id="02.04">
+                    <label class="calendar__date-label" for="02.04">2</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="03.04" id="03.04">
+                    <label class="calendar__date-label" for="03.04">3</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="04.04" id="04.04">
+                    <label class="calendar__date-label" for="04.04">4</label>
+                  </li>
+                  <li class="calendar__date">
+                    <input class="calendar__date-checkbox visually-hidden" type="checkbox" name="calendar__date"
+                      value="05.04" id="05.04">
+                    <label class="calendar__date-label" for="05.04">5</label>
+                  </li>
+                </ul>
+              </form>
+              <!-- calendar__date-content -->
+
+            </div>
+            <!-- calendar -->
+
+            <a class="form-button  button" href="">Следующий шаг</a>
+            <!-- form-button  button -->
+
+          </li>
+          <!-- form-date -->
+
+          <li class="add-plan__item  form-direction" id="form-direction">
+
+            <div class="form-date__header  plan-header">
+              <h3 class="plan-header__title">Шаг 2. &nbsp; <br class="mobile-break"><br class="tablet-break"><span
+                  class="form-date__header-title">Маршрут</span>
+              </h3>
+              <p class="plan-header__text">Укажите страны, которые вы хотели бы посетить. &nbsp;<br
+                  class="tablet-break"><br class="desktop-break"> Это может быть одна или сразу несколько.</p>
+              <ul class="plan-header__nav">
+                <li class="plan-header__item">
+                  <a class="no-style  plan-header__nav-link" href="#form-date">Даты</a>
+                </li>
+                <li class="plan-header__item  plan-header__item--active">
+                  <a class="no-style  plan-header__nav-link" href="#form-direction">маршрут</a>
+                </li>
+                <li class="plan-header__item">
+                  <a class="no-style  plan-header__nav-link" href="#trip-comment">развлечения</a>
+                </li>
+              </ul>
+            </div>
+            <!-- plan-header -->
+
+            <ul class="form-direction__slect">
+
+              <li class="select-country  select-country--chosen">
+                <div class="select-country__content">
+                  <button class="select-country__edit">
+                    <span class="select-country__edit-text">Босния и герцеговина</span>
+                  </button>
+                </div>
+                <div class="select-country__right-column">
+                  <img class="select-country__flag-img" src="img/flag-bosnia.webp" alt="" width="35" height="24">
+                </div>
+                <button class="select-country__delete"></button>
+              </li>
+              <!-- select-country -->
+
+              <li class="select-country  select-country--chosen">
+                <div class="select-country__content">
+                  <button class="select-country__edit">
+                    <span class="select-country__edit-text">чехия</span>
+                  </button>
+                </div>
+                <div class="select-country__right-column">
+                  <img class="select-country__flag-img" src="img/flag-czech.webp" alt="" width="35" height="24">
+                </div>
+                <button class="select-country__delete"></button>
+              </li>
+              <!-- select-country -->
+
+              <li class="select-country  select-country-js">
+                <div class="select-country__content">
+                  <button class="select-country__edit">
+                    <span class="select-country__edit-text">выберите страну</span>
+                  </button>
+                </div>
+                <div class="select-country__right-column">
+                  <div class="select-country__icon-add"></div>
+                </div>
+                <button class="select-country__delete"></button>
+
+                <div class="container  country-filter  modal">
+                  <div class="country-filter__container">
+
+                    <div class="country-filter__header">
+                      <h2 class="country-filter__title">Выберите страну</h2>
+                      <button class="country-filter__close" type="button"></button>
+                    </div>
+
+                    <form class="country-filter__form" action="https://echo.htmlacademy.ru" method="get">
+
+                      <ul class="country-filter__letters filter-letters">
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            id="a" value="a" checked>
+                          <label class="filter-letters__label" for="a">А</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="b" id="b">
+                          <label class="filter-letters__label" for="b">Б</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="v" id="v">
+                          <label class="filter-letters__label" for="v">В</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="g" id="g">
+                          <label class="filter-letters__label" for="g">Г</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="d" id="d">
+                          <label class="filter-letters__label" for="d">Д</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="ye" id="ye">
+                          <label class="filter-letters__label" for="ye">Е</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="z" id="z">
+                          <label class="filter-letters__label" for="z">з</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="i" id="i">
+                          <label class="filter-letters__label" for="i">и</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="k" id="k">
+                          <label class="filter-letters__label" for="k">к</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="l" id="l">
+                          <label class="filter-letters__label" for="l">л</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="m" id="m">
+                          <label class="filter-letters__label" for="m">м</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="n" id="n">
+                          <label class="filter-letters__label" for="n">н</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="o" id="o">
+                          <label class="filter-letters__label" for="o">о</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="p" id="p">
+                          <label class="filter-letters__label" for="p">п</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="r" id="r">
+                          <label class="filter-letters__label" for="r">р</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="s" id="s">
+                          <label class="filter-letters__label" for="s">c</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="t" id="t">
+                          <label class="filter-letters__label" for="t">т</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="u" id="u">
+                          <label class="filter-letters__label" for="u">у</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="f" id="f">
+                          <label class="filter-letters__label" for="f">ф</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="h" id="h">
+                          <label class="filter-letters__label" for="h">х</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="ch" id="ch">
+                          <label class="filter-letters__label" for="ch">ч</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="sh" id="sh">
+                          <label class="filter-letters__label" for="sh">ш</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="e" id="e">
+                          <label class="filter-letters__label" for="e">э</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="yu" id="yu">
+                          <label class="filter-letters__label" for="yu">ю</label>
+                        </li>
+                        <li class="filter-letters__item">
+                          <input class="filter-letters__radio  visually-hidden" type="radio" name="filter-letters"
+                            value="ya" id="ya">
+                          <label class="filter-letters__label" for="ya">я</label>
+                        </li>
+                      </ul>
+                      <!-- filter-letters -->
+
+                      <ul class="country-filter__countries filter-countries">
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="australia" id="australia">
+                          <label class="filter-countries__label" for="australia">Австралия</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="austria" id="austria">
+                          <label class="filter-countries__label" for="austria">Австрия</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="Azerbaijan" id="Azerbaijan">
+                          <label class="filter-countries__label" for="Azerbaijan">Азербайджан</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="albania" id="albania">
+                          <label class="filter-countries__label" for="albania">Албания</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="algeria" id="algeria">
+                          <label class="filter-countries__label" for="algeria">Алжир</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="angola" id="angola">
+                          <label class="filter-countries__label" for="angola">Ангола</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="andorra" id="andorra">
+                          <label class="filter-countries__label" for="andorra">Андорра</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="antigua" id="antigua">
+                          <label class="filter-countries__label" for="antigua">Антигуа и Барбуда</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="argentina" id="argentina">
+                          <label class="filter-countries__label" for="argentina">Аргентина</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="armenia" id="armenia">
+                          <label class="filter-countries__label" for="armenia">Армения</label>
+                        </li>
+                        <li class="filter-countries__item">
+                          <input class="filter-countries__radio  visually-hidden" type="radio" name="filter-countries"
+                            value="afghanistan" id="afghanistan">
+                          <label class="filter-countries__label" for="afghanistan">Афганистан</label>
+                        </li>
+                      </ul>
+                      <!-- filter-countries -->
+
+                    </form>
+                    <!-- country-filter__form-->
+
+                  </div>
+                </div>
+                <!-- container  modal  country-filter-->
+
+              </li>
+              <!-- select-country -->
+
+              <li class="select-country  select-country--add">
+                <div class="select-country__content">
+                  <button class="select-country__edit">
+                    <span class="select-country__edit-text">Добавить страну</span>
+                  </button>
+                </div>
+                <div class="select-country__right-column">
+                  <div class="select-country__icon-add"></div>
+                </div>
+                <button class="select-country__delete"></button>
+                <!-- select-country select-country--add-->
+
+              </li>
+              <!-- select-country -->
+
+            </ul>
+            <!-- form-direction__slect -->
+
+            <div class="add-plan__footer">
+              <a class="form-button  button" href="">Следующий шаг</a>
+              <a href="" class="add-plan__button  button-no-bg">На шаг назад</a>
+            </div>
+
+          </li>
+          <!-- form-direction -->
+
+          <li class="add-plan__item  trip-comment" id="trip-comment">
+
+            <div class="trip-comment__header  plan-header">
+              <h3 class="plan-header__title">Шаг 3. &nbsp; <br class="mobile-break"><br class="tablet-break"><span
+                  class="form-date__header-title">
+                  Развлечения</span>
+              </h3>
+              <p class="plan-header__text">Наконец, расскажите о своих планах времяпровождения. &nbsp; <br
+                  class="tablet-break"><br class="desktop-break">Можно писать в свободной форме и ставить тэги.
+              </p>
+              <ul class="plan-header__nav">
+                <li class="plan-header__item">
+                  <a class="no-style  plan-header__nav-link" href="#form-date">Даты</a>
+                </li>
+                <li class="plan-header__item">
+                  <a class="no-style  plan-header__nav-link" href="#form-direction">маршрут</a>
+                </li>
+                <li class="plan-header__item  plan-header__item--active">
+                  <a class="no-style  plan-header__nav-link" href="#trip-comment">развлечения</a>
+                </li>
+              </ul>
+            </div>
+            <!-- plan-header -->
+
+            <ul class="trip-comment__list">
+
+              <li class="add-plan__comments trip-comment__item">
+                <h4 class="visually-hidden">Добавьте комментарий к данному маршруту</h4>
+                <div class="trip-comment__direction">
+                  <div class="trip-comment__direction-country">Босния и Герцеговина</div>
+                </div>
+                <div class="trip-comment__flag">
+                  <img class="trip-comment__flag-img" src="img/flag-bosnia.webp" alt="" width="35" height="24">
+                </div>
+                <form class="trip-comment__form" action="https://echo.htmlacademy.ru" method="get">
+                  <textarea class="trip-comment__user-content" placeholder="План действий"></textarea>
+                </form>
+              </li>
+
+              <li class="add-plan__comments trip-comment__item">
+                <h4 class="visually-hidden">Добавьте комментарий к данному маршруту</h4>
+                <div class="trip-comment__direction">
+                  <div class="trip-comment__direction-country">Чехия</div>
+                </div>
+                <div class="trip-comment__flag">
+                  <img class="trip-comment__flag-img" src="img/flag-czech.webp" alt="" width="35" height="24">
+                </div>
+                <form class="trip-comment__form" action="https://echo.htmlacademy.ru" method="get">
+                  <textarea
+                    class="trip-comment__user-content">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </form>
+              </li>
+
+            </ul>
+            <!-- trip-comment__list -->
+
+            <div class="add-plan__footer">
+              <a class="form-button  button" href="">Отправить</a>
+              <a href="" class="add-plan__button  button-no-bg">на шаг назад</a>
+            </div>
+
+          </li>
+          <!-- trip-comment -->
+
+        </ol>
+        <!-- add-plan__list -->
+
+      </div>
+      <!-- container-form -->
+    </section>
+    <!-- add-plan -->
+
+  </main>
+  <!-- !main-content -->
+
+  @@include('layout/footer.html')
+
+  <script src="js/form.js" type="module"></script>
+</body>
+
+</html>

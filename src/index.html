@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+@@include('layout/head.html')
+
+<body class="main-page">
+
+  @@include('layout/header.html')
+
+  <main class="main-content">
+
+    <section class="promo">
+      <div class="container  promo__container">
+
+        <h1 class="visually-hidden">Онлайн-сервис путешественников "Погнали"</h1>
+        <p class="promo__fake-title">В путешествие с крутыми попутчиками!</p>
+
+        <div class="promo__comment  text-layout">
+          <p class="promo__text"> «Лучшее приложение, что я видел в жизни!»
+          </p>
+          <p class="promo__author">Мурат Эльтазин&nbsp; <br class="tablet-break"><br class="desktop-break"> главный
+            редактор газеты «гаджетлайф»</p>
+        </div>
+        <!-- promo__comment -->
+
+      </div>
+      <!-- container -->
+
+    </section>
+    <!-- !promo -->
+
+    <section class="sticky-nav">
+      @@include('layout/main-nav.html')
+    </section>
+    <!-- !sticky-nav -->
+
+    <section class="promo-comment  container">
+      <div class="promo-comment__container  text-layout">
+        <p class="promo-comment__text"> «Лучшее приложение, что я видел в жизни!»
+        </p>
+        <p class="promo-comment__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
+      </div>
+    </section>
+    <!-- !promo-comment -->
+
+    <section class="steps">
+      <div class="container">
+
+        <h2 class="visually-hidden">Как работает наш сервис</h2>
+
+        <ol class="steps__list  steps-list">
+          <li class="steps-list__item"><span class="steps-list__text">Выберите направление</span><span
+              class="steps-list__order">1</span></li>
+          <li class="steps-list__item"><span class="steps-list__text">Изучите идеи путешественников</span><span
+              class="steps-list__order">2</span></li>
+          <li class="steps-list__item"><span class="steps-list__text">Находите тех,&nbsp; <br class="mobile-break"><br
+                class="tablet-break"><br class="desktop-break">кто похож на вас</span><span
+              class="steps-list__order">3</span></li>
+          <li class="steps-list__item"><span class="steps-list__text">Путешествуйте вместе!</span><span
+              class="steps-list__order">4</span></li>
+        </ol>
+        <!-- steps__list  steps-list -->
+
+      </div>
+      <!-- container -->
+
+    </section>
+    <!-- !steps -->
+
+    <section class="about-service">
+      <div class="about-service__container  container">
+
+        <header class="header-section  text-layout  left">
+          <h2 class="header-section__title">О сервисе</h2>
+          <p class="about-service__header-text  header-section__text">Любое путешествие веселее&nbsp; <br
+              class="mobile-break">с попутчиками, которые на
+            одной волне&nbsp; <br class="tablet-break"> с тобой! Делитесь своими идеями путешествий&nbsp; <br
+              class="tablet-break"> и черпайте вдохновение в чужих. </p>
+          <p class="header-section__add-text"> А если найдете кого-то близкого по духу &mdash; &nbsp; <br
+              class="desktop-break">скорее
+            зовите в совместный трип!
+          </p>
+        </header>
+        <!-- header-section  text-layout -->
+
+        <a class="about-service__btn  button  left" href="blank.html">Подробнее</a>
+        <!-- about-service__btn  button -->
+
+      </div>
+      <!-- container -->
+
+    </section>
+    <!-- !about-service -->
+
+    <section class="countries">
+      <div class="countries__container  container">
+
+        <header class="countries__header  header-section  text-layout">
+          <h2 class="header-section__title  countries__title">Направления</h2>
+          <p class="header-section__text  countries__header-text">Мы не продаем туры&nbsp; <br class="mobile-break"><br
+              class="tablet-break"><br class="desktop-break">и ничего не рекламируем.&nbsp;<br class="mobile-break"><br
+              class="tablet-break"><br class="desktop-break">Люди
+            сами пишут о странах, куда
+            хотели бы отправиться<br class="mobile-break"><br class="tablet-break"><br class="desktop-break">и чем можно
+            там заняться.
+          </p>
+        </header>
+        <!-- header-section  text-layout -->
+
+        <ul class="countries__list">
+
+          <li class="country-card">
+            <a href="blank.html">
+              <picture>
+                <source media="(min-width: 729px)" srcset="img/thailand-tablet.webp">
+                <img class="country-card__img" src="img/thailand.webp" alt="" width="270" height="190">
+              </picture>
+            </a>
+            <div class="country-card__content">
+              <h3 class="item-title">
+                <a class="country-card__title no-style" href="blank.html">Таиланд</a>
+              </h3>
+
+              <dl class="user-counter">
+                <dt class="user-counter__icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14">
+                    <use xlink:href="img/svg/sprite.min.svg#icon-user"></use>
+                  </svg>
+                </dt>
+                <dd class="user-counter__amount">18321</dd>
+              </dl>
+              <!-- user-counter -->
+
+              <p class="country-card__text">Джунгли зовут!</p>
+              <img class="country-card__flag" src="img/flag-thailand.webp" alt="" width="35" height="24">
+            </div>
+          </li>
+          <!-- country-card -->
+
+          <li class="country-card">
+            <a href="blank.html">
+              <picture>
+                <source media="(min-width: 729px)" srcset="img/france-tablet.webp">
+                <img class="country-card__img" src="img/france.webp" alt="" width="270" height="190">
+              </picture>
+            </a>
+            <div class="country-card__content">
+              <h3 class="item-title">
+                <a class="country-card__title no-style" href="blank.html">Франция</a>
+              </h3>
+
+              <dl class="user-counter">
+                <dt class="user-counter__icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14">
+                    <use xlink:href="img/svg/sprite.min.svg#icon-user"></use>
+                  </svg>
+                </dt>
+                <dd class="user-counter__amount">18321</dd>
+              </dl>
+              <!-- user-counter -->
+
+              <p class="country-card__text">Джунгли зовут!</p>
+              <img class="country-card__flag" src="img/flag-france.webp" alt="" width="35" height="24">
+            </div>
+          </li>
+          <!-- country-card -->
+
+          <li class="country-card">
+            <a href="blank.html">
+              <picture>
+                <source media="(min-width: 729px)" srcset="img/czech-tablet.webp">
+                <img class="country-card__img" src="img/czech.webp" alt="" width="270" height="190">
+              </picture>
+            </a>
+            <div class="country-card__content">
+              <h3 class="item-title">
+                <a class="country-card__title no-style" href="blank.html">Чехия</a>
+              </h3>
+
+              <dl class="user-counter">
+                <dt class="user-counter__icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14">
+                    <use xlink:href="img/svg/sprite.min.svg#icon-user"></use>
+                  </svg>
+                </dt>
+                <dd class="user-counter__amount">18321</dd>
+              </dl>
+              <!-- user-counter -->
+
+              <p class="country-card__text">Джунгли зовут!</p>
+              <img class="country-card__flag" src="img/flag-czech.webp" alt="" width="35" height="24">
+            </div>
+          </li>
+          <!-- country-card -->
+
+        </ul>
+        <!-- countries__list -->
+
+        <a class="countries__more-btn button" href="blank.html">Показать все</a>
+        <!-- countries__more-btn  button     countries -->
+
+      </div>
+      <!-- container -->
+
+    </section>
+    <!-- !countries -->
+
+    <section class="companiones">
+      <div class="container  companiones__container">
+
+        <header class="companiones__header  header-section  text-layout">
+          <h2 class="companiones__header-title  header-section__title">Попутчики</h2>
+          <p class="header-section__text  companiones__header-text">Все мы индивидуальны и у каждого свой взгляд на
+            идеальный отдых. Одному нужен
+            пляж и коктейль,&nbsp;<br class="tablet-break"><br class="desktop-break"> а другому маршрут для хайкинга.
+          </p>
+          <p class="companiones__header-add-text  header-section__add-text">Теперь можно легко&nbsp;<br
+              class="tablet-break"><br class="desktop-break"> найти единомышленников!
+          </p>
+        </header>
+        <!-- companiones__header  header-section  text-layout -->
+
+        <ul class="companiones__list">
+
+          <li class="companion-card">
+
+            <a href="blank.html">
+              <img class="companion-card__img" src="img/human-1.webp" alt="" width="270" height="270">
+            </a>
+
+            <div class="companion-card__content">
+              <div class="companion-card__name">
+                <div class="companion-card__name-content">
+
+                  <span class="user-status"></span>
+                  <!-- user-status -->
+
+                  <a class="item-title" href="blank.html">Таня Фирсова</a>
+                </div>
+              </div>
+              <p class="companion-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+
+              <ul class="companion-card__flags  flags">
+                <li class="flags__item">
+                  <img class="flags__img" src="img/flag-sri-lanka.webp" alt="" width="35" height="25">
+                </li>
+                <li class="flags__item">
+                  <img class="flags__img" src="img/flag-thailand.webp" alt="" width="35" height="25">
+                </li>
+                <li class="flags__item">
+                  <img class="flags__img" src="img/flag-seychelles.webp" alt="" width="35" height="25">
+                </li>
+              </ul>
+              <!-- companion-card__flags  flags -->
+
+              <form class="companion-card__transport  transport">
+
+                @@include('layout/blocks/transport-list.html')
+
+              </form>
+              <!-- transport -->
+
+            </div>
+            <!-- companion-card__content  -->
+
+            <div class="companion-card__level  user-level">
+              <dl class="user-level__list">
+                <dt class="user-level__label">level</dt>
+                <dd class="user-level__number">99</dd>
+              </dl>
+            </div>
+            <!-- companion-card__level  user-level -->
+
+          </li>
+          <!-- companion-card__item -->
+
+          <li class="companion-card">
+
+            <a href="blank.html">
+              <img class="companion-card__img" src="img/human-2.webp" alt="" width="270" height="270">
+            </a>
+
+            <div class="companion-card__content">
+              <div class="companion-card__name">
+                <div class="companion-card__name-content">
+
+                  <span class="user-status  user-status--online"></span>
+                  <!-- user-status -->
+
+                  <a class="item-title" href="blank.html">Петя Демин</a>
+                </div>
+              </div>
+              <p class="companion-card__tags">#бургер #бар #футбол #концерт #крафт</p>
+
+              <ul class="companion-card__flags  flags">
+                <li class="flags__item">
+                  <img class="flags__img" src="img/flag-belgium.webp" alt="" width="35" height="25">
+                </li>
+                <li class="flags__item">
+                  <img class="flags__img" src="img/flag-czech.webp" alt="" width="35" height="25">
+                </li>
+              </ul>
+              <!-- companion-card__flags  flags -->
+
+              <form class="companion-card__transport  transport">
+
+                @@include('layout/blocks/transport-list.html')
+
+              </form>
+              <!-- transport -->
+
+            </div>
+            <!-- companion-card__content  -->
+
+            <div class="companion-card__level  user-level">
+              <dl class="user-level__list">
+                <dt class="user-level__label">level</dt>
+                <dd class="user-level__number">80</dd>
+              </dl>
+            </div>
+            <!-- companion-card__level  user-level -->
+
+          </li>
+          <!-- companion-card__item -->
+
+        </ul>
+        <!-- companiones__list -->
+
+        <a class="companiones__more-btn button" href="">Показать всех</a>
+        <!-- button -->
+
+      </div>
+      <!-- container -->
+
+    </section>
+    <!-- !companiones -->
+
+    <section class="add-profile">
+      <div class="container add-profile__container">
+
+        <h2 class="add-profile__title">Добавьте свой профиль</h2>
+
+        <ul class="add-profile__list">
+
+          <li class="add-profile__item">
+            <div class="add-profile__content">
+              <p class="add-profile__tariffs">Базовое размещение</p>
+              <p class="add-profile__price">Бесплатно</p>
+            </div>
+
+            <span class="add-profile__order add-profile__order--free">1</span>
+            <!-- counter -->
+          </li>
+
+          <li class="add-profile__item">
+            <div class="add-profile__content">
+              <p class="add-profile__tariffs">Вывод на первых позициях</p>
+              <p class="add-profile__price">99 руб./мес</p>
+            </div>
+
+            <span class="add-profile__order add-profile__order--pro">2</span>
+            <!-- counter -->
+          </li>
+
+          <li class="add-profile__item">
+            <div class="add-profile__content">
+              <p class="add-profile__tariffs">Кастомный цвет карточки</p>
+              <p class="add-profile__price">59 руб./мес</p>
+            </div>
+
+            <span class="add-profile__order add-profile__order--custom">3</span>
+            <!-- counter -->
+          </li>
+
+        </ul>
+        <!-- add-profile__conditions -->
+
+        <button class="add-profile__btn">Показать тарифы для бизнеса</button>
+        <!-- button -->
+
+      </div>
+      <!-- container -->
+
+      <div class="container  modal-business">
+        <div class="modal-business__container">
+
+          <h2 class="modal-business__title">Бизнес-тарифы</h2>
+
+          <dl class="modal-business__list">
+
+            <div class="modal-business__item">
+              <dt>Реклама у блоггера</dt>
+              <dd class="modal-business__price">300 000 руб./пост</dd>
+            </div>
+
+            <div class="modal-business__item">
+              <dt>Накрутка подписчиков</dt>
+              <dd class="modal-business__price">от 1 руб./шт.</dd>
+            </div>
+
+            <div class="modal-business__item">
+              <dt>Лайки от ботов</dt>
+              <dd class="modal-business__price">от 20 коп./лайк</dd>
+            </div>
+
+            <div class="modal-business__item">
+              <dt>Ваш продакт-плейсмент</dt>
+              <dd class="modal-business__price">Индивидуально</dd>
+            </div>
+
+          </dl>
+          <!-- modal-business__conditions -->
+
+          <button class="modal-business__btn  button-no-bg">Закрыть окно</button>
+          <!-- button -->
+
+        </div>
+
+      </div>
+      <!-- container -->
+
+    </section>
+    <!-- !add-profile -->
+
+    <section class="contact">
+      <div class="contact__container  container">
+
+        <header class="contact__header header-section  text-layout">
+          <h2 class="visually-hidden">Контакты нашего сервиса для путешествий</h2>
+          <p class="header-section__title  contact__fake-title">Заинтересовались?</p>
+          <p class="contact__header-text  header-section__text">Зарегистрируйтесь,&nbsp;<br class="mobile-break">это
+            быстро и бесплатно!&nbsp;&nbsp; <br class="mobile-break"><br class="tablet-break"><br
+              class="desktop-break">Уже зарегистрированы?
+            Тогда
+            скорее
+            <a class="header-section__login" href="blank.html">авторизуйтесь</a>.
+          </p>
+        </header>
+        <!-- contact__header header-section  text-layout -->
+
+        <form class="contact__form" action="post">
+          <label class="visually-hidden" for="contact-email"></label>
+          <input class="contact__form-input" type="email" id="contact-email" placeholder="E-mail">
+          <button class="contact__submit" type="submit">
+            <span class="contact__submit-text">Регистрация</span>
+          </button>
+        </form>
+        <p class="contact__info">Остались вопросы?&nbsp; <br class="mobile-break">Мы с радостью на них ответим!</p>
+
+        @@include('layout/blocks/contacts.html')
+
+      </div>
+    </section>
+    <!-- !contact -->
+
+    <section class="address">
+
+      <div class="address__container  contacts">
+        <div class="address__content  container">
+
+          <div class="contacts__item">
+            <p class="contacts__item-img">
+              <img src="img/icon-address.svg" alt="">
+              <svg width="21" height="21" viewBox="0 0 19 19">
+                <use xlink:href="img/svg/sprite.min.svg#icon-address"></use>
+              </svg>
+            </p>
+            <p class="no-style">
+              <a class="contacts__link contacts__link--light-bg  no-style" href="blank.html">
+                ул. Большая&nbsp; <br class="mobile-break">Конюшенная, 19/8
+              </a>
+            </p>
+          </div>
+          <!-- address__content -->
+
+          <a class="address__btn  button" href="">Проложить маршрут</a>
+          <!-- button -->
+
+        </div>
+        <!-- container -->
+
+      </div>
+
+      <a class="address__map" href="https://goo.gl/maps/rvCqiFA6ivhg7AM49" target="_blank">
+        <img class="address__map-img" src="img/map.webp" alt="" width="320" height="424">
+        <!-- <picture>
+        <source media="(min-width: 1359px)" srcset="img/img/map-tablet.webp" height="584">
+        <source media="(min-width: 1359px)" srcset="img/img/map.webp" height="584">
+        <img class="address__map-img" src="img/map-mobile.webp" alt="" width="320" height="424">
+      </picture> -->
+      </a>
+
+    </section>
+    <!-- !address -->
+
+  </main>
+  <!-- !main-content -->
+
+  @@include('layout/footer.html')
+
+  <script src="./js/script.js" type="module"></script>
+</body>
+
+</html>

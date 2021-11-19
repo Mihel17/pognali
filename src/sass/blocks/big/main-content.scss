@@ -1,0 +1,14 @@
+.main-content {
+  grid-area: main;
+  display: grid;
+  z-index: -10;
+  background-color: $main-blue;
+}
+
+.main-content--form {
+  background-color: $yellow;
+
+  @media (min-width: $tablet) {
+    background-color: $light-blue-profile;
+  }
+}

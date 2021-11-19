@@ -1,0 +1,123 @@
+.companion-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: fit-content;
+
+  @media (max-width: 620px) {
+    width: 100%;
+  }
+
+  @media (min-width: 620px) and (max-width: $tablet) {
+    min-width: 270px;
+    max-width: 285px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet) {
+    width: 285px;
+    border-radius: 20px;
+
+    .transport__item {
+      width: 31px;
+    }
+  }
+
+  .user-level {
+    background: url("../img/progress-bar.webp") no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.companion-card__img {
+  width: 100%;
+  height: auto;
+}
+
+.companion-card__content {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  padding: 25px 41px 17px;
+  background-color: #ffffff;
+
+  @media (max-width: $tablet) {
+    padding: 25px 41px 17px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 28px 31px 17px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 20px;
+  }
+}
+
+.companion-card__name {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.companion-card__name-content {
+  position: relative;
+  display: grid;
+  align-items: center;
+
+  .user-status {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: -22px;
+    top: 10px;
+  }
+}
+
+.companion-card__tags {
+  font-size: 16px;
+  line-height: 18px;
+  color: $grey;
+  margin: 13px 0 14px;
+  text-align: center;
+
+  @media (max-width: $tablet) {
+    padding: 0;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 23px;
+  }
+}
+
+.companion-card__flags {
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  top: calc(-22px / 2);
+  left: 0;
+  margin: 0;
+}
+
+.companion-card__level {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 17px;
+  left: 17px;
+
+  @media (min-width: $tablet) {
+    top: 20px;
+    left: 21px;
+  }
+}
+
+.companion-card__transport .transport__list {
+  gap: 0;
+}

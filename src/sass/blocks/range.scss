@@ -1,0 +1,80 @@
+.range {
+  flex-basis: 100%;
+  flex-grow: 1;
+  height: 2px;
+  background: $blue-range;
+  margin: 25px 0 15px 0;
+  --range-end-num: calc(var(--range-end) - var(--range-start));
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 35px 0 25px 0;
+  }
+}
+
+.range__bar {
+  position: relative;
+  width: var(--range-end-num);
+  margin-left: var(--range-start);
+  height: 2px;
+  background-color: $main-blue-light;
+}
+
+.range__bar-start {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: -4.5px;
+  background-color: $main-blue-light;
+  cursor: pointer;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    width: 13px;
+    height: 13px;
+    top: -2px;
+    left: -2px;
+  }
+}
+
+.range__bar-end,
+.range__bar-start {
+  content: "";
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.range__bar-start:hover {
+  transform: scale(1.1);
+}
+
+.range__bar-end:hover {
+  transform: scale(1.1);
+}
+
+.range__bar-end {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: -4.5px;
+  background-color: $main-blue-light;
+  cursor: pointer;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    width: 13px;
+    height: 13px;
+    top: -2px;
+    right: -2px;
+  }
+}
+
+.range__bar-start:focus,
+.range__bar-end:focus {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #000000;
+}

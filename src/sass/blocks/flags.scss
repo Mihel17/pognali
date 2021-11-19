@@ -1,0 +1,12 @@
+.flags {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flags__item {
+  border-radius: 6px;
+  overflow: hidden;
+}

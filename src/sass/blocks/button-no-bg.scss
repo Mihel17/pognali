@@ -1,0 +1,11 @@
+.button-no-bg {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  min-height: 59px;
+  padding: 10px;
+  color: $main-blue-light;
+  background: transparent;
+  border: none;
+}

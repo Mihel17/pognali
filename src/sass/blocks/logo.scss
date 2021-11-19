@@ -1,0 +1,45 @@
+.logo {
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    padding-left: 59px;
+
+    svg {
+      width: 106.76px;
+      height: 16.5px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 55px;
+    right: -15px;
+
+    svg {
+      width: 128.63px;
+      height: 19.65px;
+    }
+
+    .logo-bg {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.logo-bg {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  z-index: -1;
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.logo--dark {
+  svg path {
+    fill: $main-blue;
+  }
+}

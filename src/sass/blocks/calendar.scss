@@ -1,0 +1,183 @@
+.calendar__date-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.calendar__nav {
+  @include subtitle;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $calendar-border;
+  border-bottom: 1px solid $calendar-border;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 21px 0;
+    margin-bottom: -1px;
+  }
+}
+
+.calendar__nav-date {
+  margin: 10px 0 12px 0;
+
+  @media (min-width: $tablet) {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 23px 0 26px -1px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+}
+
+.calendar__nav-btn {
+  border: none;
+  width: 50px;
+  background: transparent url("../../img/icon-calendar-nav.svg") no-repeat left center;
+  background-size: 9px 18px;
+  opacity: 0.3;
+}
+
+.calendar__nav-btn--next {
+  transform: rotate(180deg);
+}
+
+.calendar__days,
+.calendar__date-list {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+}
+
+.calendar__days {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: $grey;
+  }
+
+  @media (min-width: $desktop) {
+    justify-items: start;
+    min-height: 56px;
+    align-items: center;
+  }
+}
+
+.calendar__day {
+  display: flex;
+
+  @media (min-width: $desktop) {
+    padding-left: 16px;
+  }
+}
+
+.calendar__day--full {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.calendar__day--weekend {
+  color: $orange-outline;
+}
+
+.calendar__date-list {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid $calendar-border;
+  border-left: 1px solid $calendar-border;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin: 10px 0 40px;
+  }
+}
+
+.calendar__date {
+  width: 100%;
+  border-right: 1px solid $calendar-border;
+  border-top: 1px solid $calendar-border;
+}
+
+.calendar__date--from .calendar__date-label::before {
+  @media (min-width: $desktop) {
+    content: "Заезд";
+    font-size: 18px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 14px;
+    left: 16px;
+  }
+}
+
+.calendar__date--to .calendar__date-label::before {
+  @media (min-width: $desktop) {
+    content: "Выезд";
+    font-size: 18px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 14px;
+    left: 16px;
+  }
+}
+
+.calendar__date-checkbox:not(:disabled) + .calendar__date-label:hover {
+  outline: 2px solid $orange-outline;
+
+  @media (min-width: $desktop) {
+    outline: 4px solid $orange-outline;
+  }
+}
+
+.calendar__date-label {
+  min-height: 31px;
+  display: grid;
+  background-color: $light-blue;
+
+  @media (max-width: $desktop) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 69px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 18px;
+    min-height: 71px;
+    padding: 14px 16px;
+  }
+}
+
+.calendar__date-label:hover {
+  position: relative;
+  z-index: 1;
+}
+
+.calendar__date-checkbox:disabled + .calendar__date-label {
+  background-color: #ffffff;
+  color: $grey;
+  opacity: 0.3;
+}
+
+.calendar__date-checkbox:checked + .calendar__date-label {
+  position: relative;
+  background-color: $main-blue;
+  color: #ffffff;
+}

@@ -1,0 +1,22 @@
+.inner-page {
+  @include body;
+  color: $main-blue;
+  background-color: $yellow;
+
+  @media (min-width: $tablet) {
+    background-color: $light-blue-profile;
+
+    // .main-nav {
+    //   padding-top: 37px;
+    // }
+  }
+}
+
+.inner-page--catalog {
+  background-color: $light-blue;
+}
+
+.inner-page .main-header {
+  position: relative;
+  background-color: $main-blue;
+}

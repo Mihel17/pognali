@@ -1,0 +1,80 @@
+.about-service {
+  @include section-radiuse;
+  background: $main-blue url("../img/about-service.webp") no-repeat -7px center;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 6;
+
+  @media (max-width: $tablet) {
+    padding: 11px 0 67px;
+  }
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/about-service-tablet.webp"), url("../img/about-service-bg-tablet.webp");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 98% 144px, 50% 17%;
+    background-size: 376px 548px, 90% 212px;
+    background-color: $main-blue;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: -55px;
+
+    background-image: url("../img/about-service-desktop.webp"), url("../img/about-service-bg-desktop.webp");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 92.5% -4px, 5% -5%;
+    background-size: 630px 665px, 212px 212px;
+    background-color: $main-blue;
+
+    .header-section__title {
+      margin-bottom: 58px;
+    }
+
+    .header-section__add-text {
+      font-size: 21px;
+      line-height: 24px;
+      margin-top: 40px;
+    }
+  }
+
+  .about-service__btn {
+    display: none;
+
+    @media (min-width: $tablet) {
+      width: fit-content;
+      min-width: 276px;
+      min-height: 80px;
+      margin-top: 33px;
+      display: grid;
+      margin-left: 34px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 67px;
+      margin-left: 70px;
+    }
+  }
+}
+
+.about-service__container {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    padding-top: 96px;
+    padding-bottom: 89px;
+  }
+
+  @media (min-width: $desktop) {
+    @include section-radiuse;
+    padding-top: 0;
+    padding-bottom: 163px;
+    grid-template-columns: 55% 1fr;
+  }
+}
+
+.about-service__header-text {
+  padding-right: 10px;
+}

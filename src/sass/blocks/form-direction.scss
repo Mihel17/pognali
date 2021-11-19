@@ -1,0 +1,44 @@
+.form-direction__title {
+  @include subtitle;
+}
+
+.form-direction__slect {
+  width: 100%;
+  position: relative;
+  display: grid;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 21px 0 27px 0;
+
+  @media (min-width: $tablet) {
+    border-top: 1px solid #e1e3e9;
+    padding: 41px 0;
+    margin: -6px 0 3px;
+    gap: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 62px 0 0;
+    margin: 0 0 3px 0;
+  }
+}
+
+.form-direction__slect::after {
+  @media (min-width: $tablet) {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 140px;
+    background-color: #e1e3e9;
+  }
+
+  @media (min-width: $desktop) {
+    right: 123px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 225px;
+  }
+}

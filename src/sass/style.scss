@@ -1,0 +1,98 @@
+//TECHNICAL--------------------------
+//mixin
+@import "global/mixin.scss";
+//vars
+@import "global/vars.scss";
+//fonts
+@import "global/fonts.scss";
+//global
+@import "global/technical.scss";
+//-----------------------------------
+
+//PAGE-------------------------------
+//main
+@import "blocks/big/main-page.scss";
+//inner
+@import "blocks/big/inner-page.scss";
+//-----------------------------------
+
+//BIG BLOCKS-------------------------
+@import "blocks/big/main-header.scss";
+@import "blocks/big/main-content.scss";
+@import "blocks/big/main-footer.scss";
+//-----------------------------------
+
+//SECTION---------------------------
+@import "blocks/main-nav.scss";
+//----------------------------------
+
+//SECTION HOME PAGE-----------------
+@import "blocks/promo.scss";
+@import "blocks/sticky-nav.scss";
+@import "blocks/promo-comment.scss";
+@import "blocks/steps.scss";
+@import "blocks/about-service.scss";
+@import "blocks/countries.scss";
+@import "blocks/companiones.scss";
+@import "blocks/add-profile.scss";
+@import "blocks/contact.scss";
+@import "blocks/address.scss";
+//---------------------------------
+
+//SECTION FORM PAGE----------------
+@import "blocks/profile-info.scss";
+@import "blocks/personal-plan.scss";
+@import "blocks/add-plan.scss";
+@import "blocks/form-date.scss";
+@import "blocks/form-direction.scss";
+//-------------------------------
+
+//SECTION CATALOG PAGE-----------
+@import "blocks/catalog-content.scss";
+@import "blocks/filter.scss";
+@import "blocks/companiones-sort.scss";
+@import "blocks/companiones-blockes.scss";
+//-------------------------------
+
+//BEM BLOCKS---------------------
+@import "blocks/site-nav.scss";
+@import "blocks/drop-nav.scss";
+@import "blocks/toggle.scss";
+@import "blocks/social.scss";
+@import "blocks/contact-bar.scss";
+@import "blocks/contacts.scss";
+@import "blocks/button.scss";
+@import "blocks/button-no-bg.scss";
+@import "blocks/form-button.scss";
+@import "blocks/user-level.scss";
+@import "blocks/user-counter.scss";
+@import "blocks/country-card.scss";
+@import "blocks/header-section.scss";
+@import "blocks/steps-list.scss";
+@import "blocks/companion-card.scss";
+@import "blocks/flags.scss";
+@import "blocks/user-status.scss";
+@import "blocks/modal-business.scss";
+@import "blocks/main-title.scss";
+@import "blocks/transport.scss";
+@import "blocks/input-block.scss";
+@import "blocks/calendar.scss";
+@import "blocks/select-country.scss";
+@import "blocks/plan-header.scss";
+@import "blocks/trip-comment.scss";
+@import "blocks/html-academy.scss";
+@import "blocks/modal.scss";
+@import "blocks/country-filter.scss";
+@import "blocks/filter-letters.scss";
+@import "blocks/filter-countries.scss";
+@import "blocks/header-content.scss";
+@import "blocks/checkbox.scss";
+@import "blocks/range.scss";
+@import "blocks/logo.scss";
+//--------------------------------
+
+//FOR JS--------------------------
+@import "global/blocks.scss";
+//--------------------------------
+
+//END-----------------------------

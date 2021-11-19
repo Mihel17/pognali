@@ -1,0 +1,36 @@
+.header-section {
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 69px;
+  }
+}
+
+.header-section__title {
+  @include title;
+  color: $dark-orange;
+}
+
+.header-section__text {
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin: 41px 0 31px;
+    line-height: 33px;
+  }
+}
+
+.header-section__add-text {
+  margin-top: 19px;
+  font-weight: 700;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+.header-section__login {
+  color: $yellow;
+}

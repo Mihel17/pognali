@@ -1,0 +1,158 @@
+.input-block {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr max-content;
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 22% 18% 1fr max-content;
+    grid-template-areas: "block-title block-input block-label checkbox-childs";
+  }
+
+  .checkbox__label {
+    gap: 13px;
+
+    @media (min-width: $tablet) {
+      gap: 22px;
+    }
+  }
+}
+
+.input-block:first-child .input-block__childs {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.input-block:last-child .input-block__childs {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.input-block__title {
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  letter-spacing: 0.07em;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: block-title;
+    order: 1;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0;
+  }
+}
+
+.input-block__form {
+  grid-column: 1 / -1;
+  position: relative;
+  width: 100%;
+  height: min-content;
+  padding: 0;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-top: 21px;
+    min-height: 70px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: block-input;
+    order: 2;
+    min-width: 180px;
+    min-height: 70px;
+  }
+}
+
+.input-block__label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.08em;
+    margin: 0 5px 6px 0;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: block-label;
+    order: 3;
+    justify-self: start;
+    margin-left: 36px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+  }
+}
+
+.input-block__childs {
+  @media (min-width: $desktop) {
+    grid-area: checkbox-childs;
+    order: 4;
+
+    .checkbox__label {
+      text-transform: lowercase;
+      margin: -8px 0 0 0;
+    }
+  }
+}
+
+.input-block__numbers {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 52px;
+  border: 1px solid $grey-border;
+  border-radius: 4px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    min-height: 70px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: $main-blue;
+  }
+}
+
+.input-block__less {
+  @include input-btn;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='2' viewBox='0 0 14 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cline y1='1' x2='14' y2='1' stroke='%23CCCCCC' stroke-width='2'/%3e%3c/svg%3e")
+    no-repeat center center;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    left: 12px;
+    transform: scale(1.5);
+  }
+}
+
+.input-block__more {
+  @include input-btn;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cline y1='6.69995' x2='14' y2='6.69995' stroke='%23CCCCCC' stroke-width='2'/%3e%3cline x1='6.7' y1='14' x2='6.7' stroke='%23CCCCCC' stroke-width='2'/%3e%3c/svg%3e ")
+    no-repeat center center;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    right: 12px;
+    transform: scale(1.5);
+  }
+}

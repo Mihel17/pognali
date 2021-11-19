@@ -1,0 +1,99 @@
+.plan-header {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 23%;
+    column-gap: 185px;
+    grid-template-areas:
+      "form-h2 form-nav"
+      "form-text form-nav";
+  }
+}
+
+.plan-header__title {
+  @include subtitle;
+  grid-area: form-h2;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.plan-header__text {
+  grid-area: form-text;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin: 37px 0 39px;
+    font-size: 20px;
+    line-height: 24px;
+    color: $grey;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 32px 0 56px;
+    font-size: 20px;
+    line-height: 24px;
+    color: $grey;
+  }
+}
+
+.plan-header__nav {
+  grid-area: form-nav;
+  display: none;
+  padding: 0;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    align-items: start;
+    align-self: start;
+    gap: 21px;
+    margin: 4px 0 0 2px;
+  }
+}
+
+.plan-header__item {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 36px;
+  align-items: center;
+  list-style: none;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.plan-header__item:hover .plan-header__nav-link {
+  color: $orange-outline;
+}
+
+.plan-header__item--active:hover .plan-header__nav-link {
+  color: #000000;
+}
+
+.plan-header__item::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='6' viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='3' cy='3' r='3' fill='%231D2E5B'/%3e%3c/svg%3e")
+    no-repeat center center;
+}
+
+.plan-header__nav-link {
+  color: #000000;
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.11em;
+  }
+}
+
+.plan-header__item--active {
+  opacity: 1;
+}
+
+.plan-header__item--active .plan-header__nav-link {
+  cursor: default;
+}

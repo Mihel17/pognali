@@ -1,0 +1,56 @@
+// COLOR------------------------------
+$main-blue: #192144;
+$blue: #132576;
+$main-blue-light: #1d2e5b;
+$blue-range: rgba(#1d2e5b, 0.2);
+$dark-blue: #161c35;
+$most-dark-blue: #121936;
+$light-blue: #edeff6;
+$light-blue-bg: #e2e5f2;
+$light-blue-modal: #f3f4f8;
+$light-blue-profile: #e5e5e5;
+$light-blue-button: #dfe3f0;
+$light-blue-section: #d4d9eb;
+$yellow: #ffd74b;
+$yellow-border: #f3c72b;
+$dark-yellow: #ffbd30;
+$orange: #ffa530;
+$dark-orange: #ff8d30;
+$orange-outline: #ff5c23;
+$grey: #444444;
+$grey-border: #cbced9;
+$light-grey: #cccccc;
+$calendar-border: #d6d9e6;
+$filter__close: #d6daed;
+$ofline: #f97676;
+$pink-bg: #f9eaea;
+$online: #81e31e;
+//-----------------------------------
+
+//FONT-------------------------------
+$font: "Blogger Sans", -apple-system, "BlinkMacSystemFontb", "Segoe UI", roboto,
+  helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+//-----------------------------------
+
+//MEDIA------------------------------
+// breakpoints
+$mobile: 320px;
+$tablet: 729px;
+$tabletMax: 769px;
+$desktop: 1359px;
+$desktopMax: 1440px;
+// gap
+$mobile-gap: 25px;
+$min-gap: 20px;
+$tablet-gap: 40px;
+$desktop-gap: 60px;
+// max-min
+$minWidth: $mobile;
+$maxWidth: 1920px;
+$maxContainerTablet: 728px;
+$maxContainerDesktop: 1360px;
+$maxWidthContainer: 1439px;
+//----------------------------------
+
+//END------------------------------

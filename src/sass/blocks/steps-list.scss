@@ -1,0 +1,111 @@
+.steps-list {
+  list-style: none;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  background-color: $yellow;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.steps-list__item {
+  font-family: $font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  min-height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  gap: 20px;
+  padding: 21px 21px 22px 24px;
+  color: $dark-blue;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    min-height: 140px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    grid-template-columns: 1fr;
+    padding: 29px 21px 22px 32px;
+    gap: 9px;
+    align-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    width: 100%;
+    font-size: 24px;
+    line-height: 24px;
+    min-height: 107px;
+    padding: 31px 65px 22px 30px;
+    align-content: start;
+    align-items: start;
+    border-radius: 20px;
+  }
+}
+
+.steps-list__item:first-child {
+  background-color: $dark-orange;
+
+  @media (min-width: $desktop) {
+    width: 345px;
+    margin-right: -30px;
+  }
+}
+
+.steps-list__item:nth-child(2) {
+  background-color: $orange;
+  z-index: 2;
+
+  @media (min-width: $desktop) {
+    width: 375px;
+    margin-right: -30px;
+  }
+}
+
+.steps-list__item:nth-child(3) {
+  background-color: $dark-yellow;
+  z-index: 3;
+
+  @media (min-width: $desktop) {
+    width: 375px;
+    margin-right: -30px;
+  }
+}
+
+.steps-list__item:last-child {
+  background-color: $yellow;
+  z-index: 4;
+
+  @media (min-width: $desktop) {
+    width: 315px;
+    padding: 31px 32px 22px 32px;
+  }
+}
+
+.steps-list__text {
+  @media (min-width: $tablet) and (max-width: 775px) {
+    width: 70%;
+  }
+}
+
+.steps-list__order {
+  text-align: end;
+  color: #ffffff;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    text-align: start;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+  }
+}

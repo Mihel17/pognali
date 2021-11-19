@@ -1,0 +1,59 @@
+.toggle {
+  min-width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  gap: 5px;
+  border: none;
+  background: none;
+  padding: 0;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    align-items: center;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #ffffff;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.toggle--open {
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: $light-grey;
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: $light-grey;
+    transform: translateY(-4px) rotate(-45deg);
+  }
+}

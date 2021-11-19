@@ -1,0 +1,104 @@
+.modal-business {
+  @include container-mobile;
+  @include container-tablet;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+
+  @media (max-width: $tablet) {
+    min-width: calc(100vw - 25px * 2);
+    top: 39px;
+  }
+
+  @media (min-width: $tablet) {
+    max-width: 750px;
+    top: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 750px;
+    top: 148px;
+    left: 38px;
+  }
+}
+
+.modal-business__container {
+  min-height: fit-content;
+  padding: 34px 25px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  color: $main-blue;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
+
+  @media (min-width: $tablet) {
+    padding: 54px 56px 0 56px;
+  }
+}
+
+.modal-business__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0 0 39px;
+  color: $dark-orange;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 0 61px;
+  }
+}
+
+.modal-business__list {
+  display: grid;
+  gap: 22px;
+
+  @media (min-width: $tablet) {
+    gap: 27px;
+  }
+}
+
+.modal-business__item {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 28px;
+    color: $grey;
+  }
+}
+
+.modal-business__price {
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    text-align: end;
+    margin-right: 4px;
+  }
+}
+
+.modal-business__btn {
+  width: calc(100% + 50px);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  justify-content: center;
+  margin: 45px -25px 0;
+  background: $light-blue-modal;
+
+  @media (min-width: $tablet) {
+    width: calc(100% + 180px);
+    min-height: 108px;
+    margin: 66px -90px 0;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    text-transform: none;
+  }
+}

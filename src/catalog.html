@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+@@include('layout/head.html')
+
+<body class="inner-page inner-page--catalog">
+  @@include('layout/header.html')
+
+  <main class="main-content catalog-content">
+    <section class="header-content catalog-content__header">
+      <div class="container header-content__container">
+        <h1 class="header-content__title main-title">Попутчики</h1>
+        <a class="header-content__link no-style" href="index.html">на главную</a>
+
+      </div>
+    </section>
+
+    <!-- <section class="filter catalog-content__filter"> -->
+    <section class="filter  filter--opened  catalog-content__filter">
+      <div class="filter__container container">
+        <div class="filter__content">
+          <header class="filter__header">
+            <h2 class="filter__title">Фильтрация по странам:</h2>
+            <button class="filter__open-btn"></button>
+          </header>
+          <form class="filter__drop-down" action="https://echo.htmlacademy.ru" method="get">
+            <ul class="filter__parts">
+              <li class="filter__part">
+                <input class="filter__part-checkbox visually-hidden" type="checkbox" name="europe" id="europe"
+                  checked />
+                <label class="filter__part-label" for="europe">Европа</label>
+              </li>
+              <li class="filter__part">
+                <input class="filter__part-checkbox visually-hidden" type="checkbox" name="asia" id="asia" />
+                <label class="filter__part-label" for="asia">Азия</label>
+              </li>
+              <li class="filter__part">
+                <input class="filter__part-checkbox visually-hidden" type="checkbox" name="usa" id="usa" />
+                <label class="filter__part-label" for="usa">Америка</label>
+              </li>
+              <li class="filter__part">
+                <input class="filter__part-checkbox visually-hidden" type="checkbox" name="islands" id="islands" />
+                <label class="filter__part-label" for="islands">Острова</label>
+              </li>
+            </ul>
+            <!-- filter__parts -->
+
+            <button class="filter__open-all btn" type="button">
+              <span class="filter__open-filter">показать все</span>
+              <span class="filter__close-filter">свернуть</span>
+            </button>
+
+            <ul class="filter__letters">
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" id="a" value="a"
+                  checked />
+                <label class="filter__letters-label" for="a">А</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="australia" id="australia" />
+                    <label class="filter-countries__label" for="australia">Австралия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="austria" id="austria" />
+                    <label class="filter-countries__label" for="austria">Австрия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Azerbaijan" id="Azerbaijan" />
+                    <label class="filter-countries__label" for="Azerbaijan">Азербайджан</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="albania" id="albania" />
+                    <label class="filter-countries__label" for="albania">Албания</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="algeria" id="algeria" />
+                    <label class="filter-countries__label" for="algeria">Алжир</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="angola" id="angola" />
+                    <label class="filter-countries__label" for="angola">Ангола</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="andorra" id="andorra" />
+                    <label class="filter-countries__label" for="andorra">Андорра</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="antigua" id="antigua" />
+                    <label class="filter-countries__label" for="antigua">Антигуа и Барбуда</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="argentina" id="argentina" />
+                    <label class="filter-countries__label" for="argentina">Аргентина</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="armenia" id="armenia" />
+                    <label class="filter-countries__label" for="armenia">Армения</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="afghanistan" id="afghanistan" />
+                    <label class="filter-countries__label" for="afghanistan">Афганистан</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="b"
+                  id="b" />
+                <label class="filter__letters-label" for="b">Б</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Bahamas" id="Bahamas" />
+                    <label class="filter-countries__label" for="Bahamas">Багамские Острова</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Bangladesh" id="Bangladesh" />
+                    <label class="filter-countries__label" for="Bangladesh">Бангладеш</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Barbados" id="Barbados" />
+                    <label class="filter-countries__label" for="Barbados">Барбадос</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Bahrain" id="Bahrain" />
+                    <label class="filter-countries__label" for="Bahrain">Бахрейн</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Belarus" id="Belarus" />
+                    <label class="filter-countries__label" for="Belarus">Белоруссия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Belize" id="Belize" />
+                    <label class="filter-countries__label" for="Belize">Белиз</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Belgium" id="Belgium" />
+                    <label class="filter-countries__label" for="Belgium">Бельгия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Benin" id="Benin" />
+                    <label class="filter-countries__label" for="Benin">Бенин</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Bulgaria" id="Bulgaria" />
+                    <label class="filter-countries__label" for="Bulgaria">Болгария</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Bolivia" id="Bolivia" />
+                    <label class="filter-countries__label" for="Bolivia">Боливия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Bosnia and Herzegovina" id="Bosnia and Herzegovina" />
+                    <label class="filter-countries__label" for="Bosnia and Herzegovina">Босния и Герцеговина</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Botswana" id="Botswana" />
+                    <label class="filter-countries__label" for="Botswana">Ботсвана</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Brazil" id="Brazil" />
+                    <label class="filter-countries__label" for="Brazil">Бразилия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Brunei" id="Brunei" />
+                    <label class="filter-countries__label" for="Brunei">Бруней</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Burkina Faso" id="Burkina Faso" />
+                    <label class="filter-countries__label" for="Burkina Faso">Буркина-Фасо</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Burundi" id="Burundi" />
+                    <label class="filter-countries__label" for="Burundi">Бурунди</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Butane" id="Butane" />
+                    <label class="filter-countries__label" for="Butane">Бутан</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="v"
+                  id="v" />
+                <label class="filter__letters-label" for="v">В</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Vanuatu" id="Vanuatu" />
+                    <label class="filter-countries__label" for="Vanuatu">Вануату</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="United Kingdom" id="United Kingdom" />
+                    <label class="filter-countries__label" for="United Kingdom">Великобритания</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Hungary" id="Hungary" />
+                    <label class="filter-countries__label" for="Hungary">Венгрия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Venezuela" id="Venezuela" />
+                    <label class="filter-countries__label" for="Venezuela">Венесуэла</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="East Timor" id="East Timor" />
+                    <label class="filter-countries__label" for="East Timor">Восточный Тимор</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Vietnam" id="Vietnam" />
+                    <label class="filter-countries__label" for="Vietnam">Вьетнам</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="g"
+                  id="g" />
+                <label class="filter__letters-label" for="g">Г</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Gabon" id="Gabon" />
+                    <label class="filter-countries__label" for="Gabon">Габон</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Haiti" id="Haiti" />
+                    <label class="filter-countries__label" for="Haiti">Гаити</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Guyana" id="Guyana" />
+                    <label class="filter-countries__label" for="Guyana">Гайана</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Gambia" id="Gambia" />
+                    <label class="filter-countries__label" for="Gambia">Гамбия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Ghana" id="Ghana" />
+                    <label class="filter-countries__label" for="Ghana">Гана</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Guatemala" id="Guatemala" />
+                    <label class="filter-countries__label" for="Guatemala">Гватемала</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Guinea" id="Guinea" />
+                    <label class="filter-countries__label" for="Guinea">Гвинея</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Guinea Bissau" id="Guinea Bissau" />
+                    <label class="filter-countries__label" for="Guinea Bissau">Гвинея-Бисау</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Germany" id="Germany" />
+                    <label class="filter-countries__label" for="Germany">Германия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Honduras" id="Honduras" />
+                    <label class="filter-countries__label" for="Honduras">Гондурас</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Grenada" id="Grenada" />
+                    <label class="filter-countries__label" for="Grenada">Гренада</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Greece" id="Greece" />
+                    <label class="filter-countries__label" for="Greece">Греция</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Georgia" id="Georgia" />
+                    <label class="filter-countries__label" for="Georgia">Грузия</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="d"
+                  id="d" />
+                <label class="filter__letters-label" for="d">Д</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Denmark" id="Denmark" />
+                    <label class="filter-countries__label" for="Denmark">Дания</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Djibouti" id="Djibouti" />
+                    <label class="filter-countries__label" for="Djibouti">Джибути</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Dominica" id="Dominica" />
+                    <label class="filter-countries__label" for="Dominica">Доминика</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Dominican Republic" id="Dominican Republic" />
+                    <label class="filter-countries__label" for="Dominican Republic">Доминикана</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="ye"
+                  id="ye" />
+                <label class="filter__letters-label" for="ye">Е</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Egypt" id="Egypt" />
+                    <label class="filter-countries__label" for="Egypt">Египет</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="z"
+                  id="z" />
+                <label class="filter__letters-label" for="z">з</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Zambia" id="Zambia" />
+                    <label class="filter-countries__label" for="Zambia">Замбия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Zimbabwe" id="Zimbabwe" />
+                    <label class="filter-countries__label" for="Zimbabwe">Зимбабве</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="i"
+                  id="i" />
+                <label class="filter__letters-label" for="i">и</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Israel" id="Israel" />
+                    <label class="filter-countries__label" for="Israel">Израиль</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="India" id="India" />
+                    <label class="filter-countries__label" for="India">Индия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Indonesia" id="Indonesia" />
+                    <label class="filter-countries__label" for="Indonesia">Индонезия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Jordan" id="Jordan" />
+                    <label class="filter-countries__label" for="Jordan">Иордания</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Iraq" id="Iraq" />
+                    <label class="filter-countries__label" for="Iraq">Ирак</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Iran" id="Iran" />
+                    <label class="filter-countries__label" for="Iran">Иран</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Ireland" id="Ireland" />
+                    <label class="filter-countries__label" for="Ireland">Ирландия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Iceland" id="Iceland" />
+                    <label class="filter-countries__label" for="Iceland">Исландия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Spain" id="Spain" />
+                    <label class="filter-countries__label" for="Spain">Испания</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Italy" id="Italy" />
+                    <label class="filter-countries__label" for="Italy">Италия</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="k"
+                  id="k" />
+                <label class="filter__letters-label" for="k">к</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Cape Verde" id="Cape Verde" />
+                    <label class="filter-countries__label" for="Cape Verde">Кабо-Верде</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Kazakhstan" id="Kazakhstan" />
+                    <label class="filter-countries__label" for="Kazakhstan">Казахстан</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Cambodia" id="Cambodia" />
+                    <label class="filter-countries__label" for="Cambodia">Камбоджа</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Cameroon" id="Cameroon" />
+                    <label class="filter-countries__label" for="Cameroon">Камерун</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Canada" id="Canada" />
+                    <label class="filter-countries__label" for="Canada">Канада</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Qatar" id="Qatar" />
+                    <label class="filter-countries__label" for="Qatar">Катар</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Kenya" id="Kenya" />
+                    <label class="filter-countries__label" for="Kenya">Кения</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Cyprus" id="Cyprus" />
+                    <label class="filter-countries__label" for="Cyprus">Кипр</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Kyrgyzstan" id="Kyrgyzstan" />
+                    <label class="filter-countries__label" for="Kyrgyzstan">Киргизия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Kiribati" id="Kiribati" />
+                    <label class="filter-countries__label" for="Kiribati">Кирибати</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="China" id="China" />
+                    <label class="filter-countries__label" for="China">Китай</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Colombia" id="Colombia" />
+                    <label class="filter-countries__label" for="Colombia">Колумбия</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="l"
+                  id="l" />
+                <label class="filter__letters-label" for="l">л</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Laos" id="Laos" />
+                    <label class="filter-countries__label" for="Laos">Лаос</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Latvia" id="Latvia" />
+                    <label class="filter-countries__label" for="Latvia">Латвия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Lesotho" id="Lesotho" />
+                    <label class="filter-countries__label" for="Lesotho">Лесото</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Liberia" id="Liberia" />
+                    <label class="filter-countries__label" for="Liberia">Либерия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Lebanon" id="Lebanon" />
+                    <label class="filter-countries__label" for="Lebanon">Ливан</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Libya" id="Libya" />
+                    <label class="filter-countries__label" for="Libya">Ливия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Lithuania" id="Lithuania" />
+                    <label class="filter-countries__label" for="Lithuania">Литва</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Liechtenstein" id="Liechtenstein" />
+                    <label class="filter-countries__label" for="Liechtenstein">Лихтенштейн</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Luxembourg" id="Luxembourg" />
+                    <label class="filter-countries__label" for="Luxembourg">Люксембург</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="m"
+                  id="m" />
+                <label class="filter__letters-label" for="m">м</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Mauritius" id="Mauritius" />
+                    <label class="filter-countries__label" for="Mauritius">Маврикий</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Mauritania" id="Mauritania" />
+                    <label class="filter-countries__label" for="Mauritania">Мавритания</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Madagascar" id="Madagascar" />
+                    <label class="filter-countries__label" for="Madagascar">Мадагаскар</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Malawi" id="Malawi" />
+                    <label class="filter-countries__label" for="Malawi">Малави</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Malaysia" id="Malaysia" />
+                    <label class="filter-countries__label" for="Malaysia">Малайзия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Mali" id="Mali" />
+                    <label class="filter-countries__label" for="Mali">Мали</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Maldives" id="Maldives" />
+                    <label class="filter-countries__label" for="Maldives">Мальдивы</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Malta" id="Malta" />
+                    <label class="filter-countries__label" for="Malta">Мальта</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Morocco" id="Morocco" />
+                    <label class="filter-countries__label" for="Morocco">Марокко</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="n"
+                  id="n" />
+                <label class="filter__letters-label" for="n">н</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Namibia" id="Namibia" />
+                    <label class="filter-countries__label" for="Namibia">Намибия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Nauru" id="Nauru" />
+                    <label class="filter-countries__label" for="Nauru">Науру</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Nepal" id="Nepal" />
+                    <label class="filter-countries__label" for="Nepal">Непал</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Niger" id="Niger" />
+                    <label class="filter-countries__label" for="Niger">Нигер</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Nigeria" id="Nigeria" />
+                    <label class="filter-countries__label" for="Nigeria">Нигерия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Netherlands" id="Netherlands" />
+                    <label class="filter-countries__label" for="Netherlands">Нидерланды</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Nicaragua" id="Nicaragua" />
+                    <label class="filter-countries__label" for="Nicaragua">Никарагуа</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="New Zealand" id="New Zealand" />
+                    <label class="filter-countries__label" for="New Zealand">Новая Зеландия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Norway" id="Norway" />
+                    <label class="filter-countries__label" for="Norway">Норвегия</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="o"
+                  id="o" />
+                <label class="filter__letters-label" for="o">о</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="UAE" id="UAE" />
+                    <label class="filter-countries__label" for="UAE">ОАЭ</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Oman" id="Oman" />
+                    <label class="filter-countries__label" for="Oman">Оман</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="p"
+                  id="p" />
+                <label class="filter__letters-label" for="p">п</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Pakistan" id="Pakistan" />
+                    <label class="filter-countries__label" for="Pakistan">Пакистан</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Palau" id="Palau" />
+                    <label class="filter-countries__label" for="Palau">Палау</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Panama" id="Panama" />
+                    <label class="filter-countries__label" for="Panama">Панама</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Papua New Guinea" id="Papua New Guinea" />
+                    <label class="filter-countries__label" for="Papua New Guinea">Папуа - Новая Гвинея</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Paraguay" id="Paraguay" />
+                    <label class="filter-countries__label" for="Paraguay">Парагвай</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Peru" id="Peru" />
+                    <label class="filter-countries__label" for="Peru">Перу</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Poland" id="Poland" />
+                    <label class="filter-countries__label" for="Poland">Польша</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Portugal" id="Portugal" />
+                    <label class="filter-countries__label" for="Portugal">Португалия</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="r"
+                  id="r" />
+                <label class="filter__letters-label" for="r">р</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Rwanda" id="Rwanda" />
+                    <label class="filter-countries__label" for="Rwanda">Руанда</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Romania" id="Romania" />
+                    <label class="filter-countries__label" for="Romania">Румыния</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Russia" id="Russia" />
+                    <label class="filter-countries__label" for="Russia">Россия</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="s"
+                  id="s" />
+                <label class="filter__letters-label" for="s">c</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Salvador" id="Salvador" />
+                    <label class="filter-countries__label" for="Salvador">Сальвадор</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Samoa" id="Samoa" />
+                    <label class="filter-countries__label" for="Samoa">Самоа</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="San marino" id="San marino" />
+                    <label class="filter-countries__label" for="San marino">Сан-Марино</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Saudi Arabia" id="Saudi Arabia" />
+                    <label class="filter-countries__label" for="Saudi Arabia">Саудовская Аравия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Seychelles" id="Seychelles" />
+                    <label class="filter-countries__label" for="Seychelles">Сейшелы</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Senegal" id="Senegal" />
+                    <label class="filter-countries__label" for="Senegal">Сенегал</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Serbia" id="Serbia" />
+                    <label class="filter-countries__label" for="Serbia">Сербия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Singapore" id="Singapore" />
+                    <label class="filter-countries__label" for="Singapore">Сингапур</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Syria" id="Syria" />
+                    <label class="filter-countries__label" for="Syria">Сирия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Slovakia" id="Slovakia" />
+                    <label class="filter-countries__label" for="Slovakia">Словакия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Slovenia" id="Slovenia" />
+                    <label class="filter-countries__label" for="Slovenia">Словения</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="USA" id="USA" />
+                    <label class="filter-countries__label" for="USA">США</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="t"
+                  id="t" />
+                <label class="filter__letters-label" for="t">т</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Tajikistan" id="Tajikistan" />
+                    <label class="filter-countries__label" for="Tajikistan">Таджикистан</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Thailand" id="Thailand" />
+                    <label class="filter-countries__label" for="Thailand">Таиланд</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Tanzania" id="Tanzania" />
+                    <label class="filter-countries__label" for="Tanzania">Танзания</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Togo" id="Togo" />
+                    <label class="filter-countries__label" for="Togo">Того</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Tonga" id="Tonga" />
+                    <label class="filter-countries__label" for="Tonga">Тонга</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Trinidad and Tobago" id="Trinidad and Tobago" />
+                    <label class="filter-countries__label" for="Trinidad and Tobago">Тринидад и Тобаго</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Tuvalu" id="Tuvalu" />
+                    <label class="filter-countries__label" for="Tuvalu">Тувалу</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Tunisia" id="Tunisia" />
+                    <label class="filter-countries__label" for="Tunisia">Тунис</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Turkmenistan" id="Turkmenistan" />
+                    <label class="filter-countries__label" for="Turkmenistan">Туркмения</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Turkey" id="Turkey" />
+                    <label class="filter-countries__label" for="Turkey">Турция</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="u"
+                  id="u" />
+                <label class="filter__letters-label" for="u">у</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Uganda" id="Uganda" />
+                    <label class="filter-countries__label" for="Uganda">Уганда</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Uzbekistan" id="Uzbekistan" />
+                    <label class="filter-countries__label" for="Uzbekistan">Узбекистан</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Ukraine" id="Ukraine" />
+                    <label class="filter-countries__label" for="Ukraine">Украина</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Uruguay" id="Uruguay" />
+                    <label class="filter-countries__label" for="Uruguay">Уругвай</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="f"
+                  id="f" />
+                <label class="filter__letters-label" for="f">ф</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Fiji" id="Fiji" />
+                    <label class="filter-countries__label" for="Fiji">Фиджи</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Philippines" id="Philippines" />
+                    <label class="filter-countries__label" for="Philippines">Филиппины</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Finland" id="Finland" />
+                    <label class="filter-countries__label" for="Finland">Финляндия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="France" id="France" />
+                    <label class="filter-countries__label" for="France">Франция</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="h"
+                  id="h" />
+                <label class="filter__letters-label" for="h">х</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Croatia" id="Croatia" />
+                    <label class="filter-countries__label" for="Croatia">Хорватия</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="ch"
+                  id="ch" />
+                <label class="filter__letters-label" for="ch">ч</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Chad" id="Chad" />
+                    <label class="filter-countries__label" for="Chad">Чад</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Montenegro" id="Montenegro" />
+                    <label class="filter-countries__label" for="Montenegro">Черногория</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Czech" id="Czech" />
+                    <label class="filter-countries__label" for="Czech">Чехия</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Chile" id="Chile" />
+                    <label class="filter-countries__label" for="Chile">Чили</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="sh"
+                  id="sh" />
+                <label class="filter__letters-label" for="sh">ш</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Switzerland" id="Switzerland" />
+                    <label class="filter-countries__label" for="Switzerland">Швейцария</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Sweden" id="Sweden" />
+                    <label class="filter-countries__label" for="Sweden">Швеция</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Sri Lanka" id="Sri Lanka" />
+                    <label class="filter-countries__label" for="Sri Lanka">Шри-Ланка</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="e"
+                  id="e" />
+                <label class="filter__letters-label" for="e">э</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Ecuador" id="Ecuador" />
+                    <label class="filter-countries__label" for="Ecuador">Эквадор</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Eritrea" id="Eritrea" />
+                    <label class="filter-countries__label" for="Eritrea">Эритрея</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Esvatini" id="Esvatini" />
+                    <label class="filter-countries__label" for="Esvatini">Эсватини</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Estonia" id="Estonia" />
+                    <label class="filter-countries__label" for="Estonia">Эстония</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Ethiopia" id="Ethiopia" />
+                    <label class="filter-countries__label" for="Ethiopia">Эфиопия</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="yu"
+                  id="yu" />
+                <label class="filter__letters-label" for="yu">ю</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="South Africa" id="South Africa" />
+                    <label class="filter-countries__label" for="South Africa">ЮАР</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="South Sudan" id="South Sudan" />
+                    <label class="filter-countries__label" for="South Sudan">Южный Судан</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+
+              <li class="filter__letters-item">
+                <input class="filter__letters-radio visually-hidden" type="radio" name="filter-letters" value="ya"
+                  id="ya" />
+                <label class="filter__letters-label" for="ya">я</label>
+                <ul class="filter__countries filter-countries">
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Jamaica" id="Jamaica" />
+                    <label class="filter-countries__label" for="Jamaica">Ямайка</label>
+                  </li>
+                  <li class="filter-countries__item">
+                    <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                      value="Japan" id="Japan" />
+                    <label class="filter-countries__label" for="Japan">Япония</label>
+                  </li>
+                </ul>
+                <!-- filter__countries  filter-countries -->
+              </li>
+            </ul>
+            <!-- filter-letters -->
+
+            <ul class="filter-countries">
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="australia" id="australia" />
+                <label class="filter-countries__label" for="australia">Австралия</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="austria" id="austria" />
+                <label class="filter-countries__label" for="austria">Австрия</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="Azerbaijan" id="Azerbaijan" />
+                <label class="filter-countries__label" for="Azerbaijan">Азербайджан</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="albania" id="albania" />
+                <label class="filter-countries__label" for="albania">Албания</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="algeria" id="algeria" />
+                <label class="filter-countries__label" for="algeria">Алжир</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="angola" id="angola" />
+                <label class="filter-countries__label" for="angola">Ангола</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="andorra" id="andorra" />
+                <label class="filter-countries__label" for="andorra">Андорра</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="antigua" id="antigua" />
+                <label class="filter-countries__label" for="antigua">Антигуа и Барбуда</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="argentina" id="argentina" />
+                <label class="filter-countries__label" for="argentina">Аргентина</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="armenia" id="armenia" />
+                <label class="filter-countries__label" for="armenia">Армения</label>
+              </li>
+              <li class="filter-countries__item">
+                <input class="filter-countries__radio visually-hidden" type="radio" name="filter-countries"
+                  value="afghanistan" id="afghanistan" />
+                <label class="filter-countries__label" for="afghanistan">Афганистан</label>
+              </li>
+            </ul>
+            <!-- filter-countries -->
+
+            <button class="filter__close btn" type="button">
+              <span class="filter__close-content">свернуть</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- filter -->
+
+    <div class="catalog-content__wrapper">
+      <section class="companiones-sort catalog-content__sort container">
+        <div class="companiones-sort__content">
+          <h2 class="companiones-sort__title">
+            Подберите идеального попутчика
+          </h2>
+          <form class="companiones-sort__form js-spollers" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="companiones-sort__characteristic">
+              <p class="companiones-sort__fieldset-title js-spoller-1">
+                хобби
+              </p>
+              <ul class="
+                    companiones-sort__list
+                    js-spoller-hidden-1 js-spoller-hidden
+                  ">
+                <li class="companiones-sort__list-item checkbox">
+                  <input class="checkbox__input visually-hidden" id="gym" name="gym" type="checkbox" checked />
+                  <label class="checkbox__label" for="gym">Спортзал</label>
+                  <!-- checkbox-->
+                </li>
+
+                <li class="companiones-sort__list-item">
+                  <input class="checkbox__input visually-hidden" id="hookah" name="hookah" type="checkbox" />
+                  <label class="checkbox__label" for="hookah">Кальян</label>
+                  <!-- checkbox-->
+                </li>
+
+                <li class="companiones-sort__list-item">
+                  <input class="checkbox__input visually-hidden" id="sofa" name="sofa" type="checkbox" />
+                  <label class="checkbox__label" for="sofa">Диван</label>
+                  <!-- checkbox-->
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- test -->
+
+            <fieldset class="companiones-sort__characteristic js-spollers">
+              <p class="companiones-sort__fieldset-title js-spoller-2">
+                музыка
+              </p>
+              <ul class="companiones-sort__list js-spoller-hidden-2">
+                <li class="companiones-sort__list-item checkbox">
+                  <input class="checkbox__input visually-hidden" id="rock" name="rock" type="checkbox" checked />
+                  <label class="checkbox__label" for="rock">Тяжелый рок</label>
+                  <!-- checkbox-->
+                </li>
+
+                <li class="companiones-sort__list-item">
+                  <input class="checkbox__input visually-hidden" id="rap" name="rap" type="checkbox" />
+                  <label class="checkbox__label" for="rap">Русский рэп</label>
+                  <!-- checkbox-->
+                </li>
+
+                <li class="companiones-sort__list-item">
+                  <input class="checkbox__input visually-hidden" id="eurodance" name="eurodance" type="checkbox" />
+                  <label class="checkbox__label" for="eurodance">Евроденс</label>
+                  <!-- checkbox-->
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- test -->
+
+            <fieldset class="companiones-sort__characteristic js-spollers">
+              <p class="companiones-sort__fieldset-title js-spoller-3">еда</p>
+              <ul class="
+                    companiones-sort__list
+                    js-spoller-hidden-3 js-spoller-hidden
+                  ">
+                <li class="companiones-sort__list-item checkbox">
+                  <input class="checkbox__input visually-hidden" id="meat-eater" name="meat-eater" type="checkbox"
+                    checked />
+                  <label class="checkbox__label" for="meat-eater">Мясоед</label>
+                  <!-- checkbox-->
+                </li>
+
+                <li class="companiones-sort__list-item">
+                  <input class="checkbox__input visually-hidden" id="healthy" name="healthy" type="checkbox" />
+                  <label class="checkbox__label" for="healthy">Сидит на ПП</label>
+                  <!-- checkbox-->
+                </li>
+
+                <li class="companiones-sort__list-item">
+                  <input class="checkbox__input visually-hidden" id="raw-vegan" name="raw-vegan" type="checkbox" />
+                  <label class="checkbox__label" for="raw-vegan">Веган-сыроед</label>
+                  <!-- checkbox-->
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="companiones-sort__characteristic js-spollers">
+              <p class="companiones-sort__fieldset-title js-spoller-4">
+                транспорт
+              </p>
+              <div class="companiones-sort__transport  transport  js-spoller-hidden-4">
+                @@include('layout/blocks/transport-list.html')
+              </div>
+            </fieldset>
+
+            <fieldset class="companiones-sort__characteristic  companiones-sort__characteristic-level">
+              <p class="companiones-sort__fieldset-title">Левел</p>
+              <div class="companiones-sort__level-input">
+                <input class="companiones-sort__level" type="number" min="1" max="100" step="1"
+                  name="companiones-sort__level--from" value="30" />
+                <input class="companiones-sort__level" type="number" min="1" max="100" step="1"
+                  name="companiones-sort__level--to" value="100" />
+              </div>
+              <div class="range" style="
+              --range-start: 30%;
+              --range-end: 100%;">
+                <div class="range__bar">
+                  <div class="range__bar-start" tabindex="0"></div>
+                  <div class="range__bar-end" tabindex="0"></div>
+                </div>
+              </div>
+            </fieldset>
+
+            <button class="companiones-sort__btn btn" type="submit">
+              показать
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- companiones-sort -->
+
+      <section class="companiones-blockes catalog-content__companiones">
+        <div class="container">
+          <h2 class="visually-hidden">Список попутчиков</h2>
+          <ul class="companiones-blockes__list">
+
+            <li class="companiones-blockes__item">
+              <a class="companiones-blockes__img" href="blank.html">
+                <img class="avatar" src="img/human-1.webp" alt="" width="70" height="70" />
+              </a>
+              <a class="companiones-blockes__name" href="blank.html">Таня Фирсова</a>
+              <p class="companiones-blockes__tags">
+                #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
+              </p>
+
+              <div class="companiones-blockes__countries  companiones-blockes__fieldset">
+                <p class="companiones-blockes__countries-title  companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">хочет посетить:</span>
+                </p>
+                <ul class="companiones-blockes__country-list">
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-sri-lanka.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">шри-ланка</p>
+                  </li>
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-thailand.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">Таиланд</p>
+                  </li>
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-seychelles.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">сейшелы</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="companiones-blockes__transport companiones-blockes__fieldset">
+                <p class="companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">транспорт:</span>
+                </p>
+                <form class="companiones-blockes__transport-form transport">
+                  @@include('layout/blocks/transport-list.html')
+                </form>
+                <!-- transport -->
+              </div>
+
+              <div class="companiones-blockes__level companiones-blockes__fieldset">
+                <p class="companiones-blockes__level-title   companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">левел:</span>
+                </p>
+                <dl class="user-level__list">
+                  <dt class="user-level__label">level</dt>
+                  <dd class="user-level__number">99</dd>
+                </dl>
+              </div>
+              <!-- user-level -->
+
+              <span class="companiones-blockes__user-status  user-status user-status--online"></span>
+              <!-- user-status  -->
+              <div class="companiones-blockes__likes">
+                <button class="companiones-blockes__heart  companiones-blockes__heart--added  btn"></button>
+                <span class="companiones-blockes__likes-text">1,5 М</span>
+              </div>
+
+              <button class="companiones-blockes__invite-btn btn">
+                ПОзвать!
+              </button>
+            </li>
+
+            <li class="companiones-blockes__item">
+              <a class="companiones-blockes__img" href="blank.html">
+                <img class="avatar" src="img/human-2.webp" alt="" width="70" height="70" />
+              </a>
+              <a class="companiones-blockes__name" href="blank.html">Петя Демин</a>
+              <p class="companiones-blockes__tags">
+                #бургер #бар #футбол #концерт #крафт
+              </p>
+
+              <div class="companiones-blockes__countries  companiones-blockes__fieldset">
+                <p class="companiones-blockes__countries-title  companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">хочет посетить:</span>
+                </p>
+                <ul class="companiones-blockes__country-list">
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-belgium.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">бельгия</p>
+                  </li>
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-czech.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">чехия</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="companiones-blockes__transport companiones-blockes__fieldset">
+                <p class="companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">транспорт:</span>
+                </p>
+                <form class="companiones-blockes__transport-form transport">
+                  @@include('layout/blocks/transport-list.html')
+                </form>
+                <!-- transport -->
+              </div>
+
+              <div class="companiones-blockes__level companiones-blockes__fieldset">
+                <p class="companiones-blockes__level-title   companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">левел:</span>
+                </p>
+                <dl class="user-level__list">
+                  <dt class="user-level__label">level</dt>
+                  <dd class="user-level__number">81</dd>
+                </dl>
+              </div>
+              <!-- user-level -->
+
+              <span class="companiones-blockes__user-status  user-status"></span>
+              <!-- user-status  -->
+              <div class="companiones-blockes__likes">
+                <button class="companiones-blockes__heart  btn"></button>
+                <span class="companiones-blockes__likes-text">1500</span>
+              </div>
+
+              <button class="companiones-blockes__invite-btn btn">
+                ПОзвать!
+              </button>
+            </li>
+
+            <li class="companiones-blockes__item">
+              <a class="companiones-blockes__img" href="blank.html">
+                <img class="avatar" src="img/human-3.webp" alt="" width="70" height="70" />
+              </a>
+              <a class="companiones-blockes__name" href="blank.html">Марк Смолов</a>
+              <p class="companiones-blockes__tags">
+                #рэп #тату #хайпбист #кроссовки #суприм
+              </p>
+
+              <div class="companiones-blockes__countries  companiones-blockes__fieldset">
+                <p class="companiones-blockes__countries-title  companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">хочет посетить:</span>
+                </p>
+                <ul class="companiones-blockes__country-list">
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-usa.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">сша</p>
+                  </li>
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-australia.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">австралия</p>
+                  </li>
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-dominica.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">доминика</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="companiones-blockes__transport companiones-blockes__fieldset">
+                <p class="companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">транспорт:</span>
+                </p>
+                <form class="companiones-blockes__transport-form transport">
+                  @@include('layout/blocks/transport-list.html')
+                </form>
+                <!-- transport -->
+              </div>
+
+              <div class="companiones-blockes__level companiones-blockes__fieldset">
+                <p class="companiones-blockes__level-title   companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">левел:</span>
+                </p>
+                <dl class="user-level__list">
+                  <dt class="user-level__label">level</dt>
+                  <dd class="user-level__number">25</dd>
+                </dl>
+              </div>
+              <!-- user-level -->
+
+              <span class="companiones-blockes__user-status  user-status"></span>
+              <!-- user-status  -->
+              <div class="companiones-blockes__likes">
+                <button class="companiones-blockes__heart  btn"></button>
+                <span class="companiones-blockes__likes-text">170</span>
+              </div>
+
+              <button class="companiones-blockes__invite-btn btn">
+                ПОзвать!
+              </button>
+            </li>
+
+            <li class="companiones-blockes__item">
+              <a class="companiones-blockes__img" href="blank.html">
+                <img class="avatar" src="img/human-4.webp" alt="" width="70" height="70" />
+              </a>
+              <a class="companiones-blockes__name" href="blank.html">Лариса Роговая</a>
+              <p class="companiones-blockes__tags">
+                #образование #карьера #учеба #линкедин
+              </p>
+
+              <div class="companiones-blockes__countries  companiones-blockes__fieldset">
+                <p class="companiones-blockes__countries-title  companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">хочет посетить:</span>
+                </p>
+                <ul class="companiones-blockes__country-list">
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-england.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">Великобритания</p>
+                  </li>
+                  <li class="companiones-blockes__country">
+                    <img class="companiones-blockes__country-img" src="img/flag-germany.webp" alt="" width="35"
+                      height="25" />
+                    <p class="companiones-blockes__country-name">Германия</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="companiones-blockes__transport companiones-blockes__fieldset">
+                <p class="companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">транспорт:</span>
+                </p>
+                <form class="companiones-blockes__transport-form transport">
+                  @@include('layout/blocks/transport-list.html')
+                </form>
+                <!-- transport -->
+              </div>
+
+              <div class="companiones-blockes__level companiones-blockes__fieldset">
+                <p class="companiones-blockes__level-title   companiones-blockes__fieldset-title">
+                  <span class="companiones-blockes__fieldset-text">левел:</span>
+                </p>
+                <dl class="user-level__list">
+                  <dt class="user-level__label">level</dt>
+                  <dd class="user-level__number">50</dd>
+                </dl>
+              </div>
+              <!-- user-level -->
+
+              <span class="companiones-blockes__user-status  user-status  user-status--online"></span>
+              <!-- user-status  -->
+              <div class="companiones-blockes__likes">
+                <button class="companiones-blockes__heart  btn"></button>
+                <span class="companiones-blockes__likes-text">170</span>
+              </div>
+
+              <button class="companiones-blockes__invite-btn btn">
+                ПОзвать!
+              </button>
+            </li>
+
+          </ul>
+
+          <button class="companiones-blockes__more-btn btn" type="button">
+            <span class="companiones-blockes__more-content">показать еще</span>
+          </button>
+
+          <div class="companiones-blockes__nav">
+            <ul class="companiones-blockes__nav-list no-style">
+              <li class="companiones-blockes__nav-item">
+                <a class="companiones-blockes__nav-link  companiones-blockes__nav-link--current">1</a>
+              </li>
+              <li class="companiones-blockes__nav-item">
+                <a class="companiones-blockes__nav-link" href="blank.html">2</a>
+              </li>
+              <li class="companiones-blockes__nav-item">
+                <a class="companiones-blockes__nav-link" href="blank.html">3</a>
+              </li>
+              <li class="companiones-blockes__nav-item">
+                <a class="companiones-blockes__nav-link" href="blank.html">4</a>
+              </li>
+            </ul>
+
+            <div class="companiones-blockes__nav-buttons">
+              <button class="companiones-blockes__back companiones-blockes__btn"></button>
+              <button class="companiones-blockes__next companiones-blockes__btn"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- companiones-blockes -->
+    </div>
+  </main>
+  <!-- !main-content -->
+
+  @@include('layout/footer.html')
+
+  <script src="js/catalog.js" type="module"></script>
+</body>
+
+</html>

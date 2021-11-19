@@ -1,0 +1,40 @@
+.form-date {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    column-gap: 190px;
+    grid-template-areas:
+      "form-header form-header"
+      "input-blocks input-blocks"
+      "calendar calendar";
+  }
+}
+
+.form-date__header {
+  grid-area: form-header;
+}
+
+.form-date__header-title {
+  @media (min-width: $desktop) {
+    margin-left: -12px;
+  }
+}
+
+.form-date__blocks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 17px;
+
+  @media (min-width: $tablet) {
+    border-top: 1px solid $calendar-border;
+    padding: 23px 0 28px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-area: input-blocks;
+    padding: 32px 0 28px;
+    gap: 14px;
+  }
+}

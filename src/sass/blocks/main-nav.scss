@@ -1,0 +1,188 @@
+.main-nav {
+  @media (max-width: $tablet) {
+    display: grid;
+    grid-template-areas: "main-nav__logo main-nav__toggle";
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  justify-content: space-between;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    grid-template-areas: "main-nav__logo main-nav__toggle main-nav__contact-bar";
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .contact-bar__login-btn {
+      min-width: 188px;
+      margin-left: auto;
+      justify-self: end;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 49px;
+    padding-bottom: 49px;
+
+    .contact-bar__login-btn {
+      min-width: 188px;
+      margin-left: auto;
+      justify-self: end;
+    }
+  }
+
+  .contact-bar__link svg {
+    fill: $dark-blue;
+
+    @media (max-width: $tablet) {
+      width: 18px;
+    }
+  }
+
+  .social {
+    display: none;
+  }
+}
+
+.main-nav--open {
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr 50px;
+    grid-template-areas:
+      "main-nav__logo main-nav__toggle"
+      "main-nav__list main-nav__list"
+      "main-nav__contact-bar main-nav__contact-bar"
+      "main-nav__drop-down main-nav__drop-down";
+    grid-template-rows: max-content 1fr max-content max-content;
+    padding-right: 25px;
+    padding-left: 25px;
+
+    .contact-bar__login-btn {
+      min-width: 100%;
+    }
+
+    .main-nav__toggle {
+      margin-left: auto;
+    }
+  }
+
+  .main-nav__logo svg {
+    fill: $dark-blue;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    grid-template-columns: 1fr 50px 1fr;
+    grid-template-areas:
+      "main-nav__logo main-nav__toggle main-nav__contact-bar"
+      "main-nav__list main-nav__list main-nav__list"
+      "main-nav__drop-down main-nav__drop-down main-nav__drop-down";
+    grid-template-rows: max-content 1fr max-content;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    .main-nav__toggle {
+      grid-area: main-nav__toggle;
+      margin: 0 auto;
+    }
+
+    .contact-bar__login-btn {
+      min-width: 188px;
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: $desktop) {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: grid;
+    background-color: #ffffff;
+    overflow: hidden;
+
+    .main-nav__list {
+      display: grid;
+      text-align: center;
+
+      @media (min-width: $tablet) and (max-width: $desktop) {
+        text-align: start;
+        margin: 91px 0 0 57px;
+      }
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      height: fit-content;
+    }
+
+    .site-nav__link {
+      color: $main-blue;
+      font-weight: 500;
+    }
+
+    .main-nav__drop-down {
+      display: grid;
+    }
+  }
+
+  .main-nav__contact-bar {
+    display: flex;
+  }
+
+  .social {
+    display: flex;
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      margin-top: 20px;
+    }
+  }
+
+  .social__item--bg {
+    background-color: transparent;
+  }
+
+  .social__item--bg:active {
+    background-color: $yellow;
+  }
+
+  .contacts {
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      margin: 145px 0 0 56px;
+      display: grid;
+    }
+  }
+
+  .contact-bar__login-btn {
+    min-height: 50px;
+  }
+}
+
+.main-nav__logo {
+  grid-area: main-nav__logo;
+
+  svg {
+    fill: #ffffff;
+  }
+}
+
+.main-nav__list {
+  grid-area: main-nav__list;
+}
+
+.main-nav__contact-bar {
+  grid-area: main-nav__contact-bar;
+
+  @media (min-width: $tablet) {
+    order: 3;
+  }
+}
+
+.main-nav__drop-down {
+  grid-area: main-nav__drop-down;
+}

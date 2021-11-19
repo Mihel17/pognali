@@ -1,0 +1,41 @@
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr 13px;
+  gap: 10px;
+  align-items: center;
+  background-color: $yellow;
+  color: $main-blue;
+  padding: 10px 21px;
+  border-radius: 10px;
+
+  @media (max-width: $tablet) {
+    min-height: 62px;
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 82px;
+    font-size: 24px;
+    line-height: 24px;
+    justify-items: start;
+    border-radius: 20px;
+    padding: 10px 33px;
+  }
+
+  &::after {
+    content: "";
+    display: grid;
+    width: 13px;
+    height: 13.5px;
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.86 7L.965 13.062V.938L12.86 7z' fill='%231D2E5B'/%3e%3c/svg%3e")
+      no-repeat center center;
+    background-size: contain;
+  }
+
+  @media (min-width: $desktop) {
+    width: fit-content;
+  }
+}

@@ -1,0 +1,120 @@
+// @mixin name($var1, $var2) {
+//   property: value;
+//   property: $var1;
+//   property: $var2;
+// }
+
+// @include name(x, y);
+
+@mixin body {
+  font-family: $font;
+  z-index: -10;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+@mixin title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (min-width: $tablet) {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
+@mixin add-plan-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (min-width: $tablet) {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@mixin subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin section-radiuse {
+  border-radius: 0 0 30px 30px;
+
+  @media (min-width: $tablet) {
+    border-radius: 0 0 60px 60px;
+  }
+}
+
+@mixin radiuse {
+  border-radius: 0 0 20px 20px;
+
+  @media (min-width: $tablet) {
+    border-radius: 0 0 60px 60px;
+  }
+}
+
+@mixin input-btn {
+  width: 42px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: $light-grey;
+}
+
+@mixin modal {
+  min-height: fit-content;
+  border-radius: 20px;
+  overflow: hidden;
+  color: $main-blue;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
+}
+
+@mixin container-mobile {
+  @media (min-width: $mobile) {
+    width: calc(100vw - 25px * 2);
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@mixin container-tablet {
+  @media (min-width: $tablet) {
+    width: calc(100vw - 40px * 2);
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@mixin header-content-bg {
+  position: relative;
+  border-radius: 0 0 20px 20px;
+  background-color: $main-blue;
+
+  @media (min-width: $tablet) {
+    border-radius: 0 0 60px 60px;
+  }
+}

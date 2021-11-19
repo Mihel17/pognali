@@ -1,0 +1,81 @@
+.main-footer {
+  grid-area: footer;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+  margin-top: -30px;
+
+  @media (min-width: $tablet) {
+    border-radius: 60px 60px 0 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: -23px;
+  }
+
+  .html-academy__link svg {
+    fill: $dark-blue;
+    transform: scale(1.5);
+    position: relative;
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      top: 5px;
+      left: -1px;
+    }
+  }
+
+  .logo svg {
+    fill: $dark-blue;
+  }
+}
+
+.main-footer__content {
+  display: grid;
+  padding-top: 37px;
+  padding-bottom: 18px;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 200px 1fr 200px;
+    align-items: center;
+    align-content: center;
+    padding-top: 45px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 42px;
+  }
+}
+
+.main-footer__logo {
+  justify-self: center;
+  padding-bottom: 40px;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: $tablet) {
+    justify-self: start;
+    padding-bottom: 0;
+
+    svg {
+      width: 106.76px;
+      height: 16.5px;
+    }
+  }
+}
+
+.main-footer__html {
+  font-size: 20px;
+  line-height: 20px;
+
+  @media (max-width: $tablet) {
+    margin-top: 43px;
+  }
+}

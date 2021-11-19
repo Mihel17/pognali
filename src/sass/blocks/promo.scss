@@ -1,0 +1,115 @@
+.promo {
+  min-height: 477px;
+  padding-top: 53px;
+  background-color: $main-blue;
+  background-image: url("../img/promo-human-bg.webp"), url("../img/promo-bg.webp");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 62.5% 100%, -250px 199px;
+  background-size: 192px 255px, cover;
+  color: #ffffff;
+  z-index: 8;
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/promo-human-bg-tablet.webp"), url("../img/promo-bg.webp");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 71.5% 74.5%, 1px 381px;
+    background-size: 372px 451px, 100% 612px;
+    z-index: 0;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../img/promo-human-bg-desktop.webp"), url("../img/promo-bg-desktop.webp");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 60% 43.5%, 0 0;
+    background-size: 431px 640px, 100% 750px;
+    background-color: $main-blue;
+  }
+
+  @media (min-width: $desktop) {
+    .promo__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 269px;
+      padding-bottom: 123px;
+    }
+  }
+}
+
+.promo__fake-title {
+  font-family: $font;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 41px 0 0;
+  text-align: center;
+
+  @media (max-width: $tablet) {
+    width: 93%;
+    margin: 38px auto 0;
+  }
+
+  @media (min-width: $mobile) {
+    margin-bottom: 245px;
+  }
+
+  @media (min-width: $tablet) {
+    width: calc(100vw - 165px * 2);
+    font-size: 60px;
+    line-height: 70px;
+    margin: 105px auto 86px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 320px;
+    min-width: 420px;
+    font-size: 60px;
+    line-height: 70px;
+    margin: 152px 0 86px 65px;
+    text-align: left;
+  }
+}
+
+.promo__comment {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    width: 50%;
+    position: relative;
+    bottom: 0;
+    margin: 0 0 355px 0;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin: 138px 0 350px -20px;
+    grid-column: 3 / 4;
+    padding: 0;
+  }
+}
+
+.promo__text {
+  @media (min-width: $desktop) {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 45px;
+  }
+}
+
+.promo__author {
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 43px;
+  }
+
+  @media (min-width: $desktop) {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 24px;
+  }
+}

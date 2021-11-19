@@ -1,0 +1,21 @@
+.promo-comment {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+    margin-top: -78px;
+    padding-top: 31px;
+    background-color: $dark-blue;
+  }
+}
+
+.promo-comment__container {
+  width: 80%;
+}
+
+.promo-comment__author {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 18px;
+}

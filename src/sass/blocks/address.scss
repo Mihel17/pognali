@@ -1,0 +1,112 @@
+.address {
+  position: relative;
+  z-index: -2;
+  top: -50px;
+  margin-bottom: -177px;
+  background-color: $yellow;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    margin-bottom: -152px;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    top: -76px;
+    margin-bottom: -133px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 798px;
+
+    .address__btn {
+      height: 80px;
+      min-width: 324px;
+    }
+  }
+}
+
+.address__container {
+  position: relative;
+  top: 30px;
+  z-index: 1;
+  background-color: $yellow;
+  border-radius: 30px;
+  padding: 35px 0;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    @include section-radiuse;
+    padding-bottom: 83px;
+  }
+
+  @media (min-width: $desktop) {
+    @include section-radiuse;
+    padding-bottom: 14px;
+  }
+}
+
+.address__content {
+  @media (min-width: $tablet) {
+    padding: 42px 56px 0;
+  }
+
+  @media (min-width: $tabletMax) {
+    padding: 43px 75px 0;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    gap: 148px;
+    grid-template-columns: 1fr 1fr;
+    padding: 35px 75px 35px 248px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktopMax) {
+    display: flex;
+    gap: 148px;
+    grid-template-columns: 1fr 1fr;
+    padding: 35px 75px 35px 283px;
+    align-items: center;
+  }
+}
+
+.address__map {
+  position: relative;
+  top: -22px;
+  overflow: hidden;
+}
+
+.address__map-img {
+  width: 100vw;
+  height: 100%;
+  min-height: 424px;
+  position: relative;
+  object-fit: cover;
+  top: -23px;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    min-height: 581px;
+    top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    top: -69px;
+  }
+}
+
+.address__btn {
+  margin: 35px 0 0;
+  border: 3px solid $main-blue;
+
+  @media (max-width: $tablet) {
+    margin: 16px 0 0;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 26px 0 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+}

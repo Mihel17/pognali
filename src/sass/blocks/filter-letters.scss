@@ -1,0 +1,61 @@
+.filter-letters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid $calendar-border;
+  border-left: 1px solid $calendar-border;
+
+  @media (min-width: $desktop) {
+    border: none;
+  }
+}
+
+.filter-letters__item {
+  border-right: 1px solid $calendar-border;
+  border-top: 1px solid $calendar-border;
+
+  @media (min-width: $desktop) {
+    border: 1px solid $calendar-border;
+    border-radius: 4px;
+  }
+}
+
+.filter-letters__radio:checked + .filter-letters__label {
+  background-color: $light-blue;
+
+  @media (min-width: $desktop) {
+    background-color: $main-blue;
+    color: #ffffff;
+  }
+}
+
+.filter-letters__label {
+  width: 100%;
+  min-height: 41px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    min-height: 67px;
+  }
+}
+
+.filter-letters__label:hover {
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $desktop) {
+    outline: 2px solid $orange-outline;
+
+    @media (min-width: $desktop) {
+      outline: 4px solid $orange-outline;
+    }
+  }
+}

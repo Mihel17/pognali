@@ -1,0 +1,10 @@
+.user-status {
+  width: 6px;
+  height: 6px;
+  background-color: $ofline;
+  border-radius: 50%;
+}
+
+.user-status--online {
+  background-color: $online;
+}

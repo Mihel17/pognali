@@ -1,0 +1,16 @@
+.button-no-bg {
+  width: calc(100% + 50px);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 59px;
+  padding: 10px;
+  color: $main-blue-light;
+  background: transparent;
+  border: none;
+  margin: 45px -25px 0;
+}

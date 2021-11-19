@@ -1,0 +1,45 @@
+.transport__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.transport__item {
+  width: 32px;
+  height: 32px;
+
+  @media (min-width: $tablet) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.transport__checkbox-label {
+  width: 100%;
+  height: 100%;
+  background-color: $light-blue;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0;
+
+  svg {
+    fill: $main-blue-light;
+    opacity: 0.15;
+    transform: scale(0.8);
+
+    @media (min-width: $tablet) {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.transport__checkbox:checked + .transport__checkbox-label {
+  svg {
+    opacity: 1;
+  }
+}

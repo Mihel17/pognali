@@ -1,0 +1,64 @@
+<nav class="main-nav  container">
+
+  <a class="main-nav__logo  logo" href="index.html">
+    <svg width="96" height="15" viewBox="0 0 96 15">
+      <use xlink:href="./img/svg/sprite.min.svg#logo"></use>
+    </svg>
+    <img class="logo-bg" src="img/logo-bg.webp" alt="" width="155" height="42">
+  </a>
+  <!-- main-nav__logo  logo -->
+
+  <button class="main-nav__toggle  toggle" type="button">
+    <span class="visually-hidden">Открыть меню</span>
+  </button>
+  <!-- main-nav__toggle  toggle -->
+
+  <ul class="main-nav__list  site-nav no-style">
+    <li class="site-nav__item  site-nav-item">
+      <a class="site-nav__link" href="index.html">О сервисе </a>
+    </li>
+    <li class="site-nav__item  site-nav-item">
+      <a class="site-nav__link" href="form.html">Направления</a>
+    </li>
+    <li class="site-nav__item  site-nav-item">
+      <a class="site-nav__link" href="catalog.html">Попутчики</a>
+    </li>
+  </ul>
+  <!-- main-nav__list  site-nav -->
+
+  <div class="main-nav__contact-bar  contact-bar">
+
+    <ul class="contact-bar__buttons">
+      <li class="contact-bar__button  contact-bar__button--tel">
+        <a class="contact-bar__link" href="tel:8800555862">
+          <svg width="19" height="19" viewBox="0 0 17 21">
+            <use xlink:href="img/svg/sprite.min.svg#icon-tel-1"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="contact-bar__button  contact-bar__button--email">
+        <a class="contact-bar__link" href="mailto:mail@htmlacademy.ru">
+          <svg width="19" height="17" viewBox="0 0 17 14">
+            <use xlink:href="img/svg/sprite.min.svg#icon-email-1"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <!-- contact-bar__buttons -->
+
+    <a class="contact-bar__login-btn  btn" href="blank.html">авторизация</a>
+
+  </div>
+  <!-- main-nav__contact-bar  contact-bar -->
+
+  <div class="main-nav__drop-down  drop-nav">
+
+    @@include('blocks/contacts.html')
+
+    @@include('blocks/social.html')
+
+  </div>
+  <!-- main-nav__drop-down  drop-nav -->
+
+</nav>
+<!-- !main-nav -->

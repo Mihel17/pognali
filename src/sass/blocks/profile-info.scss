@@ -1,0 +1,343 @@
+.profile-info {
+  display: grid;
+  grid-template-columns: $mobile-gap 1fr 1fr $mobile-gap;
+  grid-template-areas:
+    ". title title ."
+    ". level avatar ."
+    ". button button ."
+    ". tags tags ."
+    ". transport transport .";
+
+  @media (min-width: $tablet) {
+    grid-template-columns: $min-gap 1fr minmax(max-content, 1fr) 1fr $min-gap;
+    grid-template-areas:
+      ". title title title ."
+      ". level transport avatar ."
+      ". button button button ."
+      ". tags tags tags .";
+  }
+
+  @media (min-width: $tabletMax) {
+    grid-template-columns: 75px 1fr minmax(max-content, 1fr) 1fr 75px;
+    grid-template-areas:
+      ". title title title ."
+      ". level transport avatar ."
+      ". button button button ."
+      ". tags tags tags .";
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 986px 139px 190px 1fr;
+    grid-template-areas:
+      ". title level avatar ."
+      ". . . button ."
+      ". tags transport transport .";
+    padding-bottom: 94px;
+  }
+
+  &::before {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    content: "";
+    border-radius: 0 0 20px 20px;
+    background-color: $main-blue;
+    margin-bottom: 4px;
+
+    @media (min-width: $tablet) {
+      border-radius: 0 0 60px 60px;
+    }
+  }
+
+  &::after {
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: $light-blue-profile;
+  }
+
+  .main-title {
+    @media (max-width: $tablet) {
+      padding-bottom: 18px;
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      padding: 110px 0 94px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: 61px;
+    }
+  }
+
+  .main-title::after {
+    bottom: 2px;
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      bottom: 0;
+    }
+  }
+}
+
+.profile-info__fieldset {
+  position: relative;
+  border: 1px solid $grey-border;
+  border-radius: 10px;
+  padding: 22px 22px 19px 22px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.profile-info__title {
+  grid-area: title;
+}
+
+.profile-info__level {
+  grid-area: level;
+  width: 100px;
+  height: 100px;
+  margin: 20px 0 18px 17px;
+
+  @media (min-width: $tablet) {
+    width: 94px;
+    height: 94px;
+    margin: 63px 0 0 0;
+  }
+
+  @media (min-width: $desktop) {
+    width: 95px;
+    height: 95px;
+    margin: auto 44px auto 0;
+    position: relative;
+    left: -93px;
+  }
+
+  .user-level__list {
+    margin-top: -10px;
+  }
+
+  .user-level__label {
+    position: relative;
+    top: 7px;
+  }
+}
+
+.profile-info__avatar {
+  grid-area: avatar;
+  margin: 20px 17px 18px auto;
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    width: 94px;
+    height: 94px;
+    border-radius: 7px;
+    margin: 62px 1px 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    width: 190px;
+    height: 190px;
+    border-radius: 7px 7px 0 0;
+    margin: 0;
+    position: relative;
+    left: -93px;
+    top: 14px;
+  }
+}
+
+.profile-info__button {
+  min-height: 40px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  grid-area: button;
+  background-color: $light-blue-button;
+  color: $dark-blue;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 18px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    min-height: 60px;
+    margin: 50px 0 32px;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.09em;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 47px;
+    border-radius: 0 0 7px 7px;
+    position: relative;
+    left: -93px;
+  }
+}
+
+.profile-info__btn-hide {
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.profile-info__tags {
+  grid-area: tags;
+  padding: 22px 22px 19px;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 88px;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 30px 38px 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 193px 0 60px;
+    padding: 27px 38px 28px;
+  }
+}
+
+.profile-info__tags-form {
+  width: 100%;
+}
+
+.profile-info__tags-textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 36px;
+  height: fit-content;
+  border: none;
+  background: transparent;
+  font-size: 13.5px;
+  line-height: 18px;
+  color: $grey;
+
+  @media (min-width: $tablet) {
+    letter-spacing: normal;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.profile-info__transport {
+  grid-area: transport;
+  display: grid;
+  justify-content: center;
+  padding: 14px 10px 14px 10px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin: 62px 0 0 0;
+    padding: 26px 10px 0 1px;
+    min-width: 308px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    min-width: 384px;
+    position: relative;
+    left: -53px;
+    align-items: center;
+  }
+
+  .transport__list {
+    gap: 0;
+  }
+}
+
+.profile-info__fieldset-content {
+  padding: 0;
+  margin: 0;
+}
+
+.profile-info__tags-content {
+  font-weight: 400;
+  opacity: 0.6;
+  color: $grey;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    bottom: -9px;
+  }
+}
+
+.profile-info__legend {
+  position: absolute;
+  width: min-content;
+  height: fit-content;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 0 18px;
+  background-color: $light-blue-profile;
+
+  @media (max-width: $tablet) {
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    order: 2;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+  }
+
+  @media (min-width: $desktop) {
+    order: 2;
+    bottom: -10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+  }
+}
+
+.profile-info__legend-tags {
+  @media (min-width: $desktop) {
+    left: 21px;
+  }
+}
+
+.profile-info__legend-transport {
+  @media (min-width: $desktop) {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}

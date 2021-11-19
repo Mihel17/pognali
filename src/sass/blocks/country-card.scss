@@ -1,0 +1,112 @@
+.country-card {
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    width: 90%;
+    min-width: 270px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 185px;
+    min-height: 140px;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+}
+
+.country-card__img {
+  min-width: 100%;
+  height: auto;
+}
+
+.country-card__content {
+  position: relative;
+  top: -11px;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 24px;
+
+  @media (min-width: $tablet) {
+    order: -1;
+    grid-template-columns: 1fr;
+    padding: 28px 31px 20px;
+    top: 0;
+
+    .user-counter {
+      order: 3;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 23px 31px 20px;
+  }
+}
+
+.country-card__title {
+  color: #000000;
+
+  @media (min-width: $tablet) {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.country-card__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: $grey;
+  opacity: 0.3;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 2px 0 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: -10px;
+    margin-bottom: -5px;
+  }
+}
+
+.country-card__flag {
+  position: absolute;
+  border-radius: 4px;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    width: 35px;
+    height: 24px;
+    top: -13px;
+    left: 25px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 70px;
+    height: 47px;
+    position: absolute;
+    top: 17px;
+    right: -35px;
+    border-radius: 8px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 23px;
+  }
+}
+
+.country-card__user-counter {
+  position: relative;
+  top: 6px;
+}

@@ -1,0 +1,153 @@
+.country-filter {
+  @media (max-width: $tablet) {
+    padding: 0;
+    min-width: 100%;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    min-width: 100%;
+    width: calc(100% + 40px);
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+
+  .filter-countries {
+    padding: 2px 0 14px 18px;
+    margin-top: -8px;
+    display: grid;
+    gap: 4px;
+    align-items: start;
+    align-self: start;
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      padding: 42px 0 0 28px;
+      gap: 10px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 45px 0 75px 58px;
+      gap: 10px;
+    }
+  }
+}
+
+.country-filter__container {
+  @media (max-width: $tablet) {
+    @include modal;
+    border-radius: 4px;
+    padding: 0;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    @include modal;
+    width: calc(100% - 24% - 30px);
+    border-radius: 4px;
+    margin: -4px 0 0 0;
+  }
+}
+
+.country-filter__header {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 10px;
+  background-color: $main-blue;
+  color: #ffffff;
+  border-radius: 4px 4px 0 0;
+
+  @media (min-width: $tablet) {
+    padding-left: 12px;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    width: calc(100% - 20% - 60px);
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 17px;
+  }
+}
+
+.country-filter__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  padding: 11px 16px 10px;
+  margin: 0;
+
+  @media (min-width: $tablet) {
+    min-height: 70px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.country-filter__close {
+  min-width: 50px;
+  height: 100%;
+  border: none;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='.3' stroke='%23fff' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M18.875 2.75l-15.75 16.5M3.125 2.75l15.75 16.5'/%3e%3c/g%3e%3c/svg%3e")
+    no-repeat right center;
+  transform: scale(0.5);
+
+  @media (min-width: $tablet) {
+    transform: scale(1);
+    position: relative;
+    right: 23px;
+  }
+}
+
+.country-filter__form {
+  @media (max-width: $tablet) {
+    border: 1px solid #d6d9e6;
+  }
+
+  @media (min-width: $tablet) {
+    width: calc(100% + 39px);
+    display: grid;
+    grid-template-columns: calc(100% - 26% - 48px) 39%;
+    padding: 0 23px 4px 24px;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    @include modal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+    border-radius: 0 0 4px 4px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 60% 38%;
+  }
+}
+
+.country-filter__letters {
+  margin: 0 -1px 20px;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin: 35px 79.5px 33px 6px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 15px 16px;
+    margin: 32px 69px 27px 0;
+  }
+}
+
+.country-filter__countries {
+  margin: 0;
+}
