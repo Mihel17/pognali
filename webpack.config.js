@@ -27,6 +27,11 @@ module.exports = {
       '@core': path.resolve(__dirname, 'core')
     }
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    }
+  },
   module: {
     rules: [
       {
